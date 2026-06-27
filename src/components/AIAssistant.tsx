@@ -41,19 +41,9 @@ export function AIAssistant({ activeModule }: AIAssistantProps) {
     setIsLoading(true);
 
     try {
-      // Gather context based on activeModule or provide all if not selected
-      let relevantSections = SECTIONS;
-      
-      if (activeModule && activeModule !== 'home') {
-        const moduleCategoryIds = CATEGORIES.filter(c => c.moduleId === activeModule).map(c => c.id);
-        if (moduleCategoryIds.length > 0) {
-           relevantSections = SECTIONS.filter(s => moduleCategoryIds.includes(s.categoryId));
-        } else {
-           relevantSections = []; // No data for this module yet
-        }
-      }
-
-      const contextText = relevantSections.length > 0 ? relevantSections.map(s => s.content).join('\n\n---\n\n') : "The user is currently viewing a section that does not have specific manual procedures documented yet. You can still answer general questions or politely state you don't have information on this specific topic.";
+      // Always provide full context so assistant works for all cards/modules
+      const relevantSections = SECTIONS;
+      const contextText = relevantSections.map(s => s.content).join('\n\n---\n\n');
 
       const response = await fetch('/api/chat', {
         method: 'POST',

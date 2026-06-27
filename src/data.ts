@@ -56,6 +56,8 @@ export const CATEGORIES: Category[] = [
   { id: 'nsc_kvp_closure', name: 'Account Closing', moduleId: 'nsc_kvp' },
   { id: 'nsc_kvp_misc', name: 'Duplicate Certificate & Details', moduleId: 'nsc_kvp' },
   { id: 'menus_list', name: 'Menu List', moduleId: 'menus' },
+  { id: 'common_txn_main', name: 'Common Transactions', moduleId: 'common_txn' },
+  { id: 'common_issues_main', name: 'Common Issues & Fixes', moduleId: 'common_issues' },
 ];
 
 export const SECTIONS: ProcedureSection[] = [
@@ -1121,7 +1123,7 @@ A: Agent commissions for bulk postings are automatically credited to the Agent's
 1. Invoke **CSCAOP** menu
 2. **Function** - Open
 3. Enter **CIF ID**
-4. Enter **Scheme Code** (Click on Searcher)
+4. Enter **Scheme Code** (Click on the search icon for the Scheme Code and select the appropriate one: SRSCM for general conditions, SRDEF for defense personnel, or SRVRS for voluntary retirement)
 5. Click on **GO**(F4)
 6. Enter **Deposit Amount**
 7. Enter **Interest Credit A/C** if any
@@ -1133,11 +1135,9 @@ A: Agent commissions for bulk postings are automatically credited to the Agent's
 13. Click on **SUBMIT**(F10)
 14. Note Down the A/C ID and Verify the same in supervisor login using **CSCAOPV** menu.
 
-**Note 1:**
-If we forget to enter the transaction details at the time of opening, we must do the funding after verification of the opening.
+**Note 1:** If we forget to enter the transaction details at the time of opening, we must do the funding after verification of the opening.
 1. For Funding by **Cash**, Invoke **CTM** menu
-2. For Funding by **Cheque/Account transfer**, Invoke **CXFER** menu
-Funding transaction must be verified in the same menu in supervisor login.
+2. For Funding by **Cheque/Account transfer**, Invoke **CXFER** menu Funding transaction must be verified in the same menu in supervisor login.
 
 **Note 2:**
 1. For Opening through **POSB cheque**, use Customer's SB account ID as Debit A/C ID.
@@ -2818,25 +2818,9 @@ o) Then, check the current year transactions in \`HACLI\` menu and previous year
   {
     id: 'nsc_kvp_general_info',
     sectionNumber: 'General Rules',
-    title: 'About NSC & KVP',
+    title: 'About KVP',
     categoryId: 'nsc_kvp_general',
     content: `
-# 14.1.1 About National Saving Certificate (NSC)
-* **Pre-printed certificates** is discontinued from \`01-07-2016\`.
-* Scheme specially designed for Government employees, Businessmen and other salaried classes who are Income Tax assesses.
-* No maximum limit for investment.
-* No Tax deduction at source.
-* Certificates can be kept as **collateral security** to get loan from banks. The issuing Post Office will Freeze the account. There is a provision to mark freeze on such Certificate account in Finacle. The possession of NSCs will be with the advancing bank.
-* Investment up to INR 1,00,000/- per annum qualifies for IT Rebate under section 80C of Income Tax Act.
-* Trust and HUF cannot invest.
-* Rate of interest **8.10%**.
-* Minimum investment amount for NSC is Rs. 100/- and multiple of Rs 100/- (01-07-16).
-* Maturity value of a certificate of INR 100/- purchased on or after 1.4.2016 shall be INR 147.61 after 5 years.
-* A single holder type certificate can be purchased by an adult for himself or on behalf of a minor or by a minor.
-* The interest accruing annually but deemed to be reinvested under Section 80C of IT Act.
-* In case of NSC VIII and IX issue, transfer of certificates from one person to another can be done **only once** from date of issue to date of maturity.
-* At the time of transfer of Certificates from one person to another, old certificates will **not** be discharged. Name of old holder shall be rounded and name of new holder shall be written on the old certificate and on the purchase application (in case of non CBS Post offices) under dated signatures of the authorized Postmaster along with his designation stamp and date stamp of Post office.
-
 # 14.1.2 About Kisan Vikas Patra (KVP)
 * Amount Invested doubles in **110 months** (9 years & 2 months)
 * Minimum deposit Rs 1000/- and multiple of Rs 1000/- and no maximum limit.
@@ -3065,6 +3049,999 @@ Here is the breakdown organized by primary modules and schemes:
 * **HABI**: General Balance Inquiry.
 * **HOCI**: Outward Cheques Inquiry.
 * **HTDSREP**: Customer-wise TDS (Tax Deducted at Source) report.
+`
+  },
+  {
+    id: 'common_txn_12',
+    sectionNumber: '12',
+    title: '12. Common Transactions for All Schemes',
+    categoryId: 'common_txn_main',
+    content: `
+# 12. Common Transactions for All Schemes
+
+## 12.1 Transfer of accounts from PO to PO
+
+Kindly follow the following steps while transferring the accounts from one SOL to other SOL in India Post Finacle.
+
+1. Invoke **CNAC** menu to find the New A/C Number from Old A/C Number.
+2. The Format is SOLID+SCHEME+OLD NUMBER Ex:-50000300MIS123456
+3. This will give you the New A/C Number and CIF ID.
+4. Note them.
+5. Scheme Codes: MIS - MIS, SB - SB, TD - TD, SCSS - SCS, PPF - PPF, NSC - NSC, KVP - KVP, RD - RD
+**Note:** For certificates, Enter the certificate number(prefix and suffix) instead of registration number.
+6. Check the customer signature before transferring an account and take fresh KYC and SB-10(b).
+7. Before doing the transfer kindly check the pending sundry amount and ECS status for the account.
+8. If sundry amount is pending, first withdraw the amount if you forget then it will throw the error after transferring the account i.e.,"Inter SOL operations can only be inquired". For example if you transfer an account from Bangalore to Secunderabad, if you forget to withdraw the due sundry amount and you have transferred before withdrawing the account will be in Secunderabad SOL and due sundry amount will be Bangalore sundry account if you try in this case to withdraw the due sundry amount(which was in Bangalore sundry office account) then system will throw the said error. So make a practice to withdraw the due amount and then transfer the account.
+9. If ECS is enabled for the account then the account modification will throw an error after transferring the account if ECS is not enabled to your office(Error will be "ECS branch setup is not there") So take precaution before transferring.
+10. In case of PPF accounts with defaulted installments pending then the transfer will not affect the system will throw an error.
+
+### A/C TRANSFER PROCEDURE:
+1. Invoke **HACXFSOL** menu
+2. Function - Transfer
+3. Click on GO(F4)
+4. Enter Source SOL ID (Click on searcher and enter the pincode of that office to know the sol id)
+5. Enter Target SOL ID (Click on searcher and enter the pincode of that office to know the sol id)
+6. Enter the A/C ID which is to be transferred
+7. Click on SUBMIT(F10)
+8. Note down the transaction id and verify the same in the same menu in supervisor login.
+
+## 12.2 Claim Closure procedure
+
+Generally if the investor/depositor of an account expires then the accounts associated with that investor/depositor can be claimed by the claimant (Nominee if available or Legal heir) which is known as Claim Closure.
+We initially take all the supported documents and after proper verification of documents the concerned higher level official will sanction the claim closure.
+Claim closures for any account should be done only after sanction by the sanctioning authority.
+After sanctioning, claim closures can be done in any CBS office as per the SB order 08/2015 Scenario 5 and Scenario 6.
+
+### Change the depositor status to Deceased at CIF Level
+1. Before invoking the closure menu we have to make the customer status to Deceased and enter the date of death at CIF level using the menu **CMRC**.
+2. In counter PA login invoke the menu **CMRC** and select the function as Modify.
+3. Enter the CIF id and then click on Go(F4).
+4. In the customer details enter the following detailed:
+   a. Change the Customer status to "Deceased"
+   b. Enter the filed Date of Death __________
+5. Then click on Submit(F10) and verify in the same menu in supervisor login.
+
+### Closure of the account using the reason code as Death claim
+After modifying the customer status to Deceased then we have to proceed for the account closure.
+Use the account closure menu for the respective scheme i.e.
+1. For SB/PPF account -- Use the menu **HCAAC**.
+2. For RD account-- Use the menu **CRDCAAC**.
+3. For NSC/KVP certificates--- Use the menu **CSCCAAC**.
+4. For MIS/TD/SCSS account--- Use the menu **HCAACTD**.
+
+**For example** if we are closing the SB account then invoke the menu **HCAAC**.
+Then enter the below details:
+- Enter the field account ID __________
+- Select the Transaction Type as "Transfer"
+- Enter the Transaction A/c ID. "Postmaster A/c id" (SOLID+0340) because payment of claim closure should be through cheque only.
+- Then click on Go(F4)
+- Then click on Closure tab and in the closure reason column select the reason code as "DTCLM" (This is mandatory for claim closures as the system will calculate the interest based on the closure reason code).
+- Then click on Submit(F10) and verify in the supervisor login.
+
+**Note:**
+1. After successful closure of account using the claim closure then make the CIF as Suspended by using the menu **CMRC** so that no one will open the accounts using the Deceased CIF.
+2. Some of the users are changing the CIF status to Suspended CIF before closure of account which results in the error while closing the account hence make sure close the account and then change the CIF to suspended state.
+
+## 12.3 CIF Creation
+1. Invoke **CCRC** menu
+2. Choose Function as ADD
+3. Click on GO (F4)
+4. Enter appropriate title by clicking the searcher.
+5. Enter customer name in LAST NAME field only.
+6. Enter FATHER/Husband name.
+7. Choose TAX STATUS. If Pan card available enter pan no.
+8. Enter Date of Birth.
+9. Choose appropriate gender. Enter appropriate occupation type.
+10. If creating minor cif enter guardian cif and relation.
+11. Enter document details by choosing document type, document code from searcher and document unique id. Select preferred primary flag as YES.
+12. Click on expand on the right of your screen and you can add four more document details.
+13. Repeat step 11 if you have taken more than one document from customer. (Document type can be ID proof and address proof only.)
+14. Enter Address details 1 by filling up address line1, address line 2 and enter pincode all other fields will fill up automatically.
+15. You can enter more address details by clicking expand on right of screen.
+16. Choose phone type and enter phone number.
+17. Choose email type and enter email id.
+18. Enter appropriate "Tax deducted at source table code".( Mostly it will be NOTAX)
+19. Enter Relationship manager id as CIFRM.
+20. Enter Short name.
+21. Choose appropriate tax category.
+22. Click on Submit (F10).
+23. Note down the CIF and verify the same in supervisor login using same menu.
+**Note:** In some cases system will throw an error to select preferred primary flag. Then beside document details, select preferred primary flag as YES.
+
+## 12.4 CIF modification
+1. Invoke **CMRC** menu
+2. Function Modify
+3. Enter Cif id you want to modify
+4. Click on GO (F4)
+5. Make the necessary correction you want make.
+6. Click on SUBMIT (F10)
+7. Verify the cif id in the same menu in supervisor login.
+
+## 12.5 Change of Address of Customer
+1. Invoke **CMRC** menu
+2. Function Modify
+3. Enter Cif id you want to modify
+4. Click on GO (F4)
+5. Change the address in Address Details 1.
+6. Click on SUBMIT (F10)
+7. Verify the cif id in the same menu in supervisor login.
+
+## 12.6 Adding PAN card Details of Customer
+1. Invoke **CMRC** menu
+2. Function Modify
+3. Enter Cif id you want to modify
+4. Click on GO (F4)
+5. Choose Tax Status as Pan Card available and enter PAN No.
+6. Click on SUBMIT (F10)
+7. Verify the cif id in the same menu in supervisor login.
+
+## 12.7 Adding Phone number, Email ID of Customer
+1. Invoke **CMRC** menu
+2. Function Modify
+3. Enter Cif id you want to modify
+4. Click on GO (F4)
+5. Choose phone type as Landline or Mobile and enter the phone no. Choose appropriate email type and enter email id.
+6. Click on SUBMIT (F10)
+7. Verify the cif id in the same menu in supervisor login.
+
+## 12.8 Opening of Minor Account operated by Self
+In India post finacle, Date of Birth is mandatory Field. If Age is less than 18 years, The Account is treated as Minor and Guardian CIF becomes necessary in Account opening. According to POSB rules A child, age of 10 years can open the Account self.
+1. There is no need to fill the Guardian Detail in AOF.
+2. Signature and Photo of Minor should be pasted in AOF.
+3. First Create Minor CIF and write this CIF ID in AOF as Depositor CIF.
+4. In Guardian Detail, Please use unique Guardian CIF **300668762**.
+5. The mode of operation should be ''self''.
+6. CPC will use the Minor CIF ID in Datacap.
+
+**Note:** The Unique Guardian CIF ID Shows following Details:
+a) Last Name/Short Name - GUARDIAN
+b) DOB - 01/07/1960
+c) Document Type - ADPRF with unique ID 3 Dec 2014 email.
+d) Document Code - PSBID
+e) Nationality - Indian
+f) Tax Deduction At Source – NOTAX
+
+## 12.9 Taking Cash from Vault
+Vault in Finacle is same as treasury in our DOP. As we take cash from treasury, same is taking cash from vault in the morning before opening the counter.
+In vault operations Debit means "comes in" and Credit means "goes out".
+Please follow the below steps while taking the cash from Vault:
+1. Invoke **HTM** menu
+2. Function - ADD
+3. Transaction Type\\Sub Type - Cash\\Cash transfer
+4. Click on GO(F4)
+5. Then select Part transaction type as "Debit" , give the teller account id and enter the amount and then click "ADD"
+6. Then after clicking ADD button in the second record enter the Vault account ID(SOLID+0406) and then click on "3=3" button beside the amount option.
+7. After clicking 3=3 button the system automatically fills the amount and Part Transaction Type as credit.
+8. Click on POST.
+9. Note down the Transaction ID and verify the same in the same menu in supervisor login.
+
+## 12.10 Giving Cash to Vault
+Vault in Finacle is same as treasury in our DOP. As we give cash to treasury, same is giving cash to vault in the evening after closing the counter.
+In vault operations Debit means "comes in" and Credit means "goes out".
+Please follow the below steps while giving the cash to Vault:
+1. Invoke **HTM** menu
+2. Function - ADD
+3. Transaction Type\\Sub Type - Cash\\Cash transfer
+4. Click on GO (F4)
+5. Then select Part transaction type as "Debit", give the vault account id(SOLID+0406) and enter the amount and then click "ADD".
+6. Then after clicking ADD button in the second record enter the teller account ID and then click on "3=3" button beside the amount option.
+7. After clicking 3=3 button the system automatically fills the amount and Part Transaction Type as credit.
+8. Click on POST.
+9. Note down the Transaction ID and verify the same in the same menu in supervisor login.
+
+## 12.11 Checking Teller Cash Position
+1. Invoke **HACLINQ** menu
+2. Enter TELLER ID/OFFICE ACCOUNT ID
+3. Click on GO (F4)
+4. System will display the Ledger Details of the Entered Account.
+**Note:** You can also use **HTCPIAE** to view teller cash position. Choose your employee id by clicking the searcher and click submit.
+
+## 12.12 Post Counter Operations – To view unverified Transactions
+1. Invoke **HFTI** and select the transaction status as “Entered” then click on GO (F4)
+2. Then it should display as "No records fetched". If it shows some pending transactions, note down the transaction id and verify them.
+3. Invoke **HFTI** and select the transaction status as "posted" then click on GO (F4)
+4. Then it should display as "No records fetched". If it shows some pending transactions, note down the transaction id and verify them.
+
+## 12.13 Report Generation and printing.
+1. Invoke **HFINRPT** menu
+2. Select the Required Report
+3. Enter Necessary Parameters
+4. Click on SUBMIT (F10)
+5. System will display the message 'Report Generated Successfully View HPR in 10 Mins'.
+6. Generate all the required reports by above procedure.
+7. Invoke **HPR** menu
+8. Click on GO (F4)
+9. Select the Reports and Click on Print Screen.
+10. Save or Print the Reports.
+
+## 12.14 Passbook Printing
+1. Invoke **HPBP** menu
+2. Enter A/C ID
+3. Check the Name and Click on Print
+4. Select Appropriate Printer and Click on Print
+5. Select YES if the passbook printed correctly
+6. Select NO if there is any mistake and repeat the process for the same account number.
+**Note:** 
+1. For New Passbook, First time, it will print the cover page and then we have to enter the account number again and click on Print to get the Transactions page.
+2. For DPB and FPB, Enter the A/C ID and Click on Modify. Select New Passbook, Click on Print, then cover page will be printed. Enter the A/C ID again and click on Print to get the Transactions page.
+
+## 12.15 Printing of Passbook which was already printed
+HPBPR means passbook print reset
+1. Invoke **HPBPR** menu
+2. Function - RESET
+3. Enter A/C ID
+4. Enter From Date and To Date (For which the passbook has to be printed)
+5. Click on Accept
+6. Select the transactions and click on SUBMIT (F10)
+7. Verify the same in the same menu in supervisor login.
+8. Then Invoke **HPBP** menu
+9. Enter the A/C ID
+10. Click on Print
+11. Select Appropriate printer and again click on print.
+12. Click on YES if the passbook was printed correctly. Otherwise, Click on NO to re-print.
+
+## 12.16 BO Transactions
+Process (provisional) of Accounts standing or opened at BOs after Account Office Migrated to CBS.
+
+### Account Opening (Savings/RD/TD)
+Account opening form received at BO and sent to SO / HO.
+**At BO:**
+Cash and form collected at BO. New Account Opening form is only to be used. Signature and Photo should be taken/pasted only on the English side of the form. Photo should be of the size of the place available in the form and should not extend outside the printed portion. PR No. should be noted on the top of the Form.
+**At SO/HO:**
+Open the account in Finacle and fund the account by debiting BO settlement account i.e SOLID+0339 (in future separate settlement account will be opened for each BO and each scheme which will be intimated on the day of migration).. Savings account cannot be funded while opening and has to be funded after opening of account subsequently. RD and TD Accounts have to be funded while opening by using the BO settlement account for debit. Value date should be given as BO date on which Preliminary Receipt(PR) was issued. Also attach the relevant BO code in account opening screen.
+* Index to PR is to be maintained manually in a register.
+* This account opening will reflect in the day’s LOT.
+
+### Subsequent Deposit/Withdrawal In SB
+**Withdrawal by customers at BO up to Rs.5000/-**
+**At BO:** For withdrawals up to Rs.5000/-, BPM has to first note new account number and CIF ID on the Passbook and BOSB/RD Journal as well as SS Book. Tally signatures on SB-7 with SS Book and pay cash. Ensure that new account number is noted on the SB-7. Make entry in the Passbook and BO SB Journal as done during before migration to CBS. In BO Daily Account, mention new account number.
+**At SO/HO:** Based on vouchers received which will have the new account number (if old number is written, Counter PA has to see the new number and note on the SB-7) - execute the menu **CXFER** . Debit the customer account and credit the branch office settlement office account i.e SOLID+0339 (in future separate settlement account will be opened for each BO and each scheme which will be intimated on the day of migration) and value date should be given as BO Date. Enter the name of the BO in Transfer particulars field removing the word “BY TRANSFER”.
+
+**Withdrawal by customers at BO exceeding Rs.5000/-**
+**At BO:** For withdrawals up to Rs.5000/-, BPM has to first note new account number and CIF ID on the Passbook(first time) and BOSB Journal as well as SS Book. Tally signatures on SB-7 with SS Book and issue SB-28. Send Passbook and SB-7 to Account Office for sanction. On receipt of sanction, repeat the above procedure.
+**At SO/HO:** On receipt of Passbook and SB-7 from BO, Signatures and balance in the account should be matched in Finacle under Account Inquiry menu (**HACLI**). Issue sanction on SB-7, and send to BO. Based on vouchers received after withdrawal, same procedure as mentioned above should be followed. SB-45 register to be maintained manually.
+
+**Subsequent deposit in SB by customers at BO**
+**At BO:** For subsequent deposits, BPM has to first note new account number and CIF ID on the Passbook (first time) and BOSB Journal as well as SS Book. Collect cash and Pay-in-Slip. Ensure that new account number is noted on the Pay-in-Slip. Make entry in the Passbook and BO SB Journal as done before migration to CBS. In BO Daily Account, mention new account number.
+**At SO / HO:** Based on vouchers received which will have the new account number (if old number is written, Counter PA has to see the new number and note on the Pay-in-Slip) - execute the menu **CXFER**. Credit the customer account and debit the branch office settlement office account i.e SOLID+0339 (in future separate settlement account will be opened for each BO and each scheme which will be intimated on the day of migration) and value date should be given as BO Date.
+
+**Subsequent deposit in RD by customers at BO**
+**At BO:** For subsequent deposits, BPM has to first note new account number and CIF ID on the Passbook and BOSB Journal as well as SS Book. Collect cash and Pay-in-Slip. Ensure that new account number is noted on the Pay-in-Slip. Make entry in the Passbook and BO RD Journal as done before migration to CBS. In BO Daily Account, mention new account number.
+**At SO / HO:** Based on vouchers received which will have the new account number (if old number is written, Counter PA has to see the new number and not on the Pay-in-Slip) - execute the menu **CRDP** and credit the customer account and debit the branch office settlement office account i.e SOLID+0339 and value date should be given as BO Date.
+
+### Account Closure Of SB/RD/TD
+**Account closure form presented At BO**
+**At BO:** Accept the account closure form, Tally signatures with SS Book. Enter new Account number on all the relevant record and on SB-7A as well as passbook. Issue SB-28 and send SB-7A and Passbook to Account Office. On receipt of sanction, follow the same procedure as mentioned for withdrawals above Rs.5000/-. Ensure that if month change happens in between date of sanction by AO and date of payment, fresh sanction should be obtained from AO.
+**At SO / HO:** On receipt of Passbook and SB-7A, tally signatures and balance of the account by invoking Account Inquiry menu (**HACLI**). Execute Menu **HACACCR** (Interest accrual menu for SBA) for the SB Account and prepare sanction on SB-7A based on the closing interest shown in the report. On receipt of SB-7A duly paid from the BO, do the normal closure of Savings Account in Finacle and select BO Settlement Account as credit account (value date should be date of account closure at BO). If BPM returns the earlier sanction due to change of month, fresh sanction should be issued by repeating the earlier process. In case of RD and TD, trial closure should be invoked and based on the report of Trial closure, sanction should be sent to BO.
+On receipt of paid voucher from BO, invoke the menu **CRDCAAC** for RD closure and **HCAACTD** for TD closure. Value date should be BO date. Closure proceeds to be transferred to BO settlement account SOLID+0339 (in future separate settlement account will be opened for each BO and each scheme which will be intimated on the day of migration).
+
+**Note:**
+1. BO code needs to be linked at the time of account opening (BO Code will be available in account opening screen in search option).
+2. All transactions received from BOs duly entered in BO Daily Account should be mandatorily done via the office account earmarked for the BO i.e 0339.
+3. If any transactions of account opened at BO is done at Account Office, it will reflect as a transaction of the SO/HO in LOT. In such a case, transaction should be just like transaction done for the account standing at Account Office. No such transaction should be done without entry in the Passbook.
+4. No MPKBY RD list will be accepted at any BO whose Account Office is migrated to CBS.
+5. Savings Certificates will not be issued/discharged by any BO independently.
+
+All BO transactions should be done only after initiating the Day End process by invoking **HISCOD**.
+
+### BO Transactions in Detail: At SO/HO
+**SB Deposit**
+1. Invoke **CXFER** menu
+2. Function - ADD
+3. Transaction Type/Sub Type - Bank Induced
+4. Click on GO (F4)
+5. Enter Dr A/C ID as your SOL Id+ 0339
+6. Enter Cr A/C ID as SB account no
+7. Enter the Amount
+9. Enter the BO name in Transaction Particulars field. (Delete ‘BY TRANSFER’ and enter BO name)
+10. Enter Value Date as BO Date.
+11. Click on POST
+12. Note down the transaction id and verify the same in the same menu in supervisor login.
+
+**SB Withdrawal**
+1. Invoke **CXFER** menu
+2. Function - ADD
+3. Transaction Type/Sub Type - Bank Induced
+4. Click on GO (F4)
+5. Enter Dr A/C ID as SB account no
+6. Enter Cr A/C ID as your SOL Id+ 0339
+7. Enter the Amount
+9. Enter the BO name in Transaction Particulars field. (Delete ‘BY TRANSFER’ and enter BO name)
+10. Enter Value Date as BO Date.
+11. Click on POST
+12. Note down the transaction id and verify the same in the same menu in supervisor login.
+
+**SB Account Opening**
+1. Follow the steps in Section 1.3 of this book. After Step 6, choose Branch Office (Just click the searcher beside Branch office field and choose the BO).
+2. Continue the next steps and open the account.
+3. For initial Deposit, follow the steps in SB deposit section above.
+
+**SB Closure**
+1. Invoke **HCAAC** menu
+2. Function - Close
+3. Enter the A/C number
+4. Select the transaction type as Transfer and Enter Transfer A/c Id as your SOL id + 0340
+5. Click on GO (F4)
+6. Go through A/C information and Closure tabs
+7. Enter the appropriate closure reason code in Closure tab
+8. Click on SUBMIT (F10)
+9. Verify the closure in supervisor login using the same menu
+10. Invoke **CXFER** menu
+11. Function – ADD, Transaction Type/Sub Type - Bank Induced
+12. Click on GO (F4)
+13. Enter Dr A/C ID as your SOL Id+ 0340
+14. Enter Cr A/C ID as a) your SOL Id+ 0339
+15. Enter the Amount (SB Closure maturity value)
+16. Enter the BO name in Transaction Particulars field. (Delete ‘BY TRANSFER’ and enter BO name)
+17. Enter Value Date as BO Date.
+18. Click on POST
+19. Note down the transaction id and verify the same in the same menu in supervisor login.
+**Note:** We should not recommend closing SB accounts as there are so many errors while closing SB accounts. Convince the customer to just maintain the account with minimum balance and keep the account alive.
+
+**RD Deposit**
+1. Invoke **CRDP** menu
+2. Function -Add
+3. Transaction type – Transfer/Bank Induced.
+4. Click on GO (F4)
+5. Enter RD A/c number
+6. Enter the Amount and Note down the default if any
+7. Enter the value date as BO date
+8. Scroll down and Choose mode of Payment as Transfer
+9. Enter Account Id as your Sol Id+0339
+10. Enter Transfer amount
+11. Click on SUBMIT (F10)
+12. Note down the transaction id and post the same in the same menu in supervisor login.
+
+**RD Account Opening**
+1. Follow the steps in Section 2.2 of this book. After Step 5 choose Branch Office (Just click the searcher beside Branch office field and choose the BO).
+2. Follow the remaining steps and Open the account and verify the same in supervisor login.
+
+**RD Closure**
+1. Invoke **CRDCAAC** menu
+2. Function - Close
+3. Enter A/C ID
+4. View the signature using F9
+5. Click on GO (F4)
+6. Select the box nearer to Close
+7. Enter appropriate closure reason code
+8. Select Repayment Mode as Transfer
+9. Enter the Repayment A/C as your SOL id+0340 for transfer
+10. Click on SUBMIT (F10)
+11. Verify the closure in supervisor login using **CRDCAACV** menu
+12. Invoke **CXFER** menu
+13. Function – ADD, Transaction Type/Sub Type - Bank Induced
+14. Click on GO (F4)
+15. Enter Dr A/C ID as your SOL Id+ 0340
+16. Enter Cr A/C ID as a) your SOL Id+ 0339 for cash closures and giving RBI cheque b) Customer SB A/c no if transferring to SB.
+7. Enter the Amount (RD Closure maturity value)
+9. Enter the BO name in Transaction Particulars field. (Delete ‘BY TRANSFER’ and enter BO name)
+10. Enter Value Date as BO Date.
+11. Click on POST
+12. Note down the transaction id and verify the same in the same menu in supervisor login.
+
+**TD Account Opening**
+1. Follow the steps in Section 3.1 of this book. After Step 15 scroll down to the sub heading “MIS CODE”. There you will find Branch Office field. Choose Branch Office (Just click the searcher beside Branch office field and choose the BO).
+2. Follow the remaining steps and open the account and verify the account using **CMISAOPV**.
+
+**TD Account Closure**
+1. Make sure that the overdue interest is paid upto date
+2. Invoke **HCAACTD** menu
+3. Function - Close
+4. Enter TD A/C ID
+5. View signature (F9)
+6. Click on GO (F4)
+7. View Account information Tab
+8. View Closure Details
+9. Select Close mode as a) Repayment account for Cash closures and Closure by giving RBI cheque b) SB account for transferring closure maturity value to customer SB account.
+10. Repayment account ID is automatically SOLID+0340 account only.
+11. For SB A/C Transfer, Select SB Account and Enter SB A/C ID, Enter Cash CCY Code as INR.
+12. View Closure Exceptions
+13. Select Appropriate Closure Reason Code
+14. Click on SUBMIT (F10)
+15. Verify the transaction in supervisor login using **HCAACVTD** menu
+16. For closure by RBI and cheque and cash do the following steps also.
+17. Invoke **CXFER** menu
+18. Function – ADD, Transaction Type/Sub Type - Bank Induced
+19. Click on GO (F4)
+20. Enter Dr A/C ID as your SOL Id+ 0340
+21. Enter Cr A/C ID as a) your SOL Id+ 0339 for cash closures and giving RBI cheque b) Customer SB A/c no if transferring to SB.
+22. Enter the Amount (RD Closure maturity value)
+23. Enter the BO name in Transaction Particulars field. (Delete ‘BY TRANSFER’ and enter BO name)
+24. Enter Value Date as BO Date.
+25. Click on POST
+26. Note down the transaction id and verify the same in the same menu in supervisor login.
+
+## 12.17 Checking EOD Blocking Validation
+1. Invoke **HFINRPT**
+2. Go to Page 3
+3. Generate the report “EOD BLOCKING VALIDATION” report
+4. There should not be any blockings. If there are any, check HFTI, HAFI, pending cheque book issue verifications, pending stock transfer transactions.
+
+## 12.18 Perform Day End
+In order to lessen the load on the server DOP changed the EOD execution in Finacle application. Previously first step of EOD process i.e., HSCOD should be executed by SOLs (offices) and then the remaining steps i.e., HSOLCOP and HSCOLD by CPC team of the Circle.
+There is only small change instead of HSCOD now the Sol's should invoke **HISCOD** (a new menu only for EOD initialization which is available for SU/PM/SA roles in DOP Finacle).
+
+The revised procedure in detail is as follows:
+1. Submission of Pre EOD Menu - **HISCOD**: Branch User will be submitting after clearing the blocking validation.
+2. Execution of EOD 1st Menu - **HSCOD**: CPC User will be executing with optimal parallelization as 20 once HISCOD is submitted for their SETs.
+3. Execution of EOD 2nd Menu - **HSOLCOP**: Circle SPOCs will be executing for their SETs with optimal parallelization as 20 once HSCOD is completed for their SETs.
+4. Execution of EOD 3rd Menu - **HSCOLD**: Circle SPOCs will be executing for their SETs with optimal parallelization as 20 once HSOLCOP is completed for their SETs.
+During EOD execution, the overall EOD progress for the Circle to be monitored & co-ordinated by CPC team centrally.
+
+**Submission of Pre EOD Menu by Branch User:**
+Please find the procedure to be followed by Branch user for Submitting Pre EOD menu:
+- Invoke **HISCOD** (Initiate SOL Change Operation Date) menu
+- Provide the SOL ID under the field “SOL SET ID”, Hours as 0 & Minutes as 1
+- Submit
+
+**SOL Level Date Change Execution by CPC:**
+Please find the procedure to be followed by CPC user for SOL Date Change Execution:
+- Invoke **HSCOD** (SOL Change Operation Date) menu
+- Provide the Circle SET ID under field “SOL SET ID”
+- Provide Optimal Parallelization under field “No. of Parallel SOLs”
+- Submit
+
+CPC user can inquire lists of SOLs where HISCOD submitted for their Set through **HSSI** menu.
+CPC user can inquire the HSCOD running status for their Set through HSSI menu.
+The EOD Status of particular SET or for all SOLs can be monitored through HSSI menu.
+
+## 12.19 Common Login Errors
+Most of the times in Finacle, we face some login issues when we are working due to network failure or incorrect password entered by the user.
+In Finacle the menus which starts with "C" stands for customized menus only for DOP where which starts with "H" stands for Hyperlink which is a common menu in Finacle.
+Also for some menus in Finacle user restrictions are given in order to overcome the misuse for different kind of menus as per the recommendations given by the DOP at the time of agreement.
+**CSAC** and **CRESET** are only customized and permitted to use only for System Administrators And Supervisors.
+
+**Prerequisites for using these menus are:-**
+1. Logout from the Finacle for the user who is facing login problem.
+2. Delete the browsing the history by clicking on Tools------>Delete browsing history.
+3. Clear browser cache. (Press F12 and then press CTRL+R).
+4. Clear SSL State. (Tools menu in the menu bar of the browser -> Internet options -> Content -> Clear SSL State)
+
+**CSAC:-**
+This menu is used when any user is facing the problem "User already logged in" issue due to the following reasons:-
+If the user closes the browser without clicking on logout i.e., improper closing of browser.
+If any problem in the network or central server then the system will display the error while working.
+Sometimes even session expired but improperly also leads to same problem.
+In the above cases the user id need to SAC by the system administrator by invoking the menu **CSAC** then the system will ask to enter the user id and then submit.
+
+**CRESET:-**
+If the user enters the password wrongly for 3 consecutive times then the system throws an error "maximum attempts are reached user id is locked" then in this case invoke the menu **CRESET** from the system administrator login enter the user id and submit.
+**Note:** There is one more case where user forgets the password, in this case both menus will not work we have to contact concern SPOC/CPC to reset the password for that corresponding user as mentioned earlier menus are restricted in Finacle not to misuse.
+
+## 12.20 Opening Atal Pension Yojana Account
+1. Invoke **CAPY** menu
+2. Function - ADD
+3. Enter Account ID - SB A/C ID
+4. Click on GO (F4)
+5. Enter PRAN number if the customer already had PRAN.
+6. Enter/Alter Nomination Details According to the Requirement
+7. Select Pension Amount in PM Scheme Details
+8. Premium amount will be fetched automatically according to the selected pension amount
+9. Select Frequency of Installment
+10. Amount will be deducted automatically from customer's SB A/C on 1st of every month (For monthly contribution)
+11. Click on SUBMIT (F10)
+12. System will display Policy APY Enrolled Successfully for Account :300708XXXX. (For EX) Request no: SR201512080000XXXXX (For EX) Please Verify for transaction.
+13. Verify the transaction in the same menu in supervisor login.
+14. After verification in supervisor login, PRAN Number will be Generated.
+
+## 12.21 Opening PMJJBY and PMSBY Accounts
+1. Invoke **CPMY** menu
+2. Function - ADD
+3. Enter A/C ID (Savings A/C ID)
+4. Select PM Yojana (Scheme) - PM Jeeven Jyoti Bima/PM Suraksha Bima
+5. Click on GO (F4)
+6. Add/Change the Nomination Details
+7. Click on SUBMIT (F10)
+8. Verify the transaction in the same menu in supervisor login.
+9. After verification, Amount will be deducted from the entered savings account according to the selected scheme.
+10. LOT will be generated in the name of Supervisor/System.
+
+## 12.22 Inquiry by POSB Cheque number
+If a Customer approaches Post Office Savings bank for withdrawal by POSB cheque or Presented the POSB cheque for any other account opening or presented at the Bank, In some cases, there will be no account number present on the cheque and if he also forgot to bring the passbook while withdraw, then there is a procedure to find the account number using the cheque number in india post finacle.
+1. Invoke **HINQACHQ** menu in supervisor login.
+2. Enter Cheque number
+3. Enter SOL ID
+4. Click on GO (F4)
+5. System will display the Details of the customer having that cheque.
+
+## 12.23 To Find Finacle Account Number from Sanchaya Account Number
+For Every account number in sanchaya post, there is an equivalent 10 Digit Account number in Finacle. To find the new account number from the old account number, follow the below procedure.
+1. Invoke **CNAC** menu
+2. Enter the old account number in the following format
+SOL ID + Scheme Code + Old Account Number (Ex: 50000300SB123456)
+3. Click on SUBMIT (F10)
+4. System will display the New 10 Digit Account number, CIF ID of the first depositor and his/her name.
+
+Scheme codes for:
+SB – SB, TD – TD, MIS – MIS, RD – RD, SCSS – SCS, PPF – PPF, NSS – NSS, SSA – SSA, NSC – NSC, KVP – KVP
+For Certificates, enter the certificate number instead of Registration Number.
+
+**Note:**
+Don’t enter Zero (0) if it is present at the 1st position in the suffix of the certificate number.
+Ex: If the KVP certificate number is 05GG 092128 then enter the following in CNAC menu
+SOL ID + KVP + 05GG92128
+
+## 12.24 To find SOL ID of Other Post Offices
+There are many ways to find the SOL ID of the other POs in finacle. Some of them are given below.
+
+**1st Way:**
+1. Invoke **HFTI** menu
+2. Delete the SOL ID in the SOL ID field and enter the pincode of the post office for which SOL ID has to be known.
+3. Click on the searcher beside the SOL ID field.
+4. System will display the SOL ID of that particular post office if it is migrated to finacle.
+
+**2nd Way:**
+1. Invoke **HAFI** menu
+2. Delete the SOL ID in the SOL ID field and enter the pincode of the post office for which SOL ID has to be known.
+3. Click on the searcher beside the SOL ID field.
+4. System will display the SOL ID of that particular post office if it is migrated to finacle.
+
+**3rd Way:**
+1. Invoke **HFTR** menu
+2. Delete the SOL ID in the SOL ID field and enter the pincode of the post office for which SOL ID has to be known.
+3. Click on the searcher beside the SOL ID field.
+4. System will display the SOL ID of that particular post office if it is migrated to finacle.
+
+**4th Way:**
+1. Invoke **HACXFSOL** menu
+2. Function – Transfer
+3. Click on GO (F4)
+4. In the Target SOL ID field, enter the pincode of the post office for which SOL ID has to be known.
+5. Click on the searcher beside the Target SOL ID field.
+6. System will display the SOL ID of that particular post office if it is migrated to finacle.
+
+In short, wherever you find the SOL ID field, you can delete your office SOL ID and can enter the pincode of the post office for which SOL ID has to be known and you have to click on the searcher beside that field to know the SOL ID of that particular post office.
+`
+  },
+  {
+    id: 'common_issues_13',
+    sectionNumber: '13',
+    title: '13. Common Issue and Solutions',
+    categoryId: 'common_issues_main',
+    content: `
+# 13. Common Issue and Solutions
+
+**\*\*\*MAKE ERROR ENTRY BEFORE DOING ANY OF THE FOLLOWING AND TAKE PERMISSION FROM HIGHER AUTHORITIES WHEREVER NECESSARY\*\*\***
+
+## 13.1 Wrong Deposits and Withdrawals
+
+Many times we come across situations where we erroneously make excess deposits or withdrawals. Like customer presents a deposit form for Rs.1000 and we make a deposit of Rs.10,000 by mistake or customer gives a withdrawal form for Rs.10000 and we withdraw only 1000. Since all deposits (except RD deposit) will be in posted state we cannot modify or delete such transactions. (In case of RD deposit the transaction will be in verified state after verification by supervisor.) Many such situations occur in our day to day counter activities. How to reverse such transactions? Below is the step by step procedure for reversal of such transactions.
+
+**\*\*\*Make an error entry in the error book before doing this transaction.\*\*\***
+
+1. Invoke the menu **HCRT**
+2. Select Operation as REVERSE
+3. Select function as REQUEST
+4. Enter Transaction Id
+5. Click on GO(F4)
+6. Select the transaction to be reversed by clicking the checkbox to the left.
+7. Click SUBMIT(F10)
+8. Note down the Ref. no
+9. Verify the Ref.no using the same menu.
+
+**UNFORTUNATELY HCRT MENU IS NOT WORKING IN OPERATIVE POs. BUT THE PROCEDURE ABOVE IS CORRECT. WE REGRET FOR THIS UNFORTUNATE SITUATION.**
+We request all the trade union leaders to take up this issue with the directorate and request them to allow us to use HCRT menu at operative POs. After all we are all humans and prone to make errors.
+
+Fortunately our highly intelligent friends have come up with other alternatives of HCRT and we discuss them one by one below.
+
+**Case 1: Excess/short deposit in SB**
+Withdraw the wrong deposit amount using CTM and then make the deposit again for actual deposit amount. The wrong deposit amount and corresponding withdrawal amount will appear in LOT. Round off them and deduct those values from SB deposit total and SB withdrawal total.
+Alternately You can obtain a withdrawal form from the customer for the excess deposited amount if the customer is still at the counter.
+
+**Case 2: Excess/Short withdrawal in SB**
+Deposit the wrong withdrawal amount using CTM and then make the withdrawal again for actual withdrawal amount. The wrong withdrawal amount and corresponding deposit amount will appear in LOT. Round off them and deduct those values from SB deposit total and SB withdrawal total.
+Alternately you can obtain a Deposit and withdraw forms from the customer for the wrong withdrawn amount if the customer is still at the counter.
+
+**Case 3: Excess deposit in RD**
+As of now no solution is available for excess deposits in RD. We can use HCRT but to our great luck it’s not working. We can request the customer if possible.
+
+For excess deposit in PPF see section 5.12 to know how to reverse the excess amount.
+For excess deposit in SSA see section 13.14 to know how to reverse the excess amount.
+
+## 13.2 Wrong Account Openings
+
+**Case 1: Account opened with wrong CIF**
+1. Invoke menu **HCCA**
+2. Choose function as MODIFY
+3. Enter account no
+4. Click on GO (F4)
+5. Enter the correct CIF by Deleting the existing CIF
+6. Select Modify A/C Name as YES (**Mandatory**)
+7. Choose appropriate Reason code
+8. Click on SUBMIT (F10)
+9. Verify account number using same menu in supervisor login.
+
+**Case 2: Account opened with incorrect value date or incorrect denomination (in case of RD) or incorrect deposit amount (in case of TD/MIS/SCSS )**
+If the account is not opened through agent the process is simple.
+1. Invoke the verification in Supervisor login
+2. Choose function as Cancel
+3. Enter account id
+4. Click on SUBMIT (F10)
+
+If the account is opened through agent the process is a bit tedious. If we had HCRT available first we have to reverse the agent commission and the follow the above 4 steps. But since HCRT is not working let’s see how it is done.
+1. First verify the wrongly opened account.
+2. Invoke the menu **HACXFRSC**
+3. Choose the function as Transfer
+4. Click on GO (F4)
+5. Enter the account ID
+6. Choose target scheme code as exceptional account.
+   * For RD account target scheme code as RECURRING DEPOSIT exceptional
+   * For MIS/TD/SCSS account, target scheme code as MIS/TD/SCSS exceptional account
+7. Click on SUBMIT (F10) and note down the instruction no.
+8. Verify the instruction no using same menu in supervisor login.
+9. Then close the account using appropriate menu and choose closure reason as Exceptional closure. (just follow the normal closure procedures)
+10. Verify the closure using appropriate menus.
+
+Open the account again with correct values.
+
+**Alternately,**
+After opening the account, before verification, note down the transaction id related to that account opening using **HFTI** menu.
+1. Invoke **HFTI** menu
+2. Enter the Entry user id (User id in which the account was opened)
+3. Select transaction status as Entered.
+4. System will display all the unverified transactions including Account openings.
+5. Note down the Transaction id related to that particular account which was opened wrongly by finding the account number generated.
+6. Delete that transaction id in PA login using **HTM** menu.
+7. Verify the deleted transaction using the same menu in supervisor login.
+8. Then the account will be opened with Zero balance
+9. Close the account using Exceptional closure reason code by making an error entry.
+10. Reverse the agent commission from the agents SB Account.
+11. Then open the account again with correct values.
+
+**Case 3: Wrongly opened certificates**
+Since each certificate is treated as individual account in Finacle you can follow the same procedures as explained above but you have to follow the steps for each certificate.
+
+**Case 4: Multiple account openings**
+Many times we get “**System could not get response from server**” while doing transactions. If you get this error while opening new accounts, 99% the account will be opened. Don’t press SUBMIT button again and again when you get this error. The number of times you press the button, the number of times the account will be opened. So for Sachin tendulkar’s sake don’t press the submit button again and again when you get **System could not get response from server** error while opening new accounts or issuing new certificates. Use HFTI or HAFI menus to check if the account is opened or not. Only after you are absolutely sure that the account is not opened, you can open the account again.
+If multiple accounts are opened, you can follow steps in Case 2 above and close the extra account openings. Make sure you deduct excess agent commission payment if any.
+
+## 13.3 Problems in verification of Certificates Issue
+
+For Issuing certificates through POSB cheque, we will enter the cheque number while issue without checking whether that cheque book has been issued to that particular SB account or not. In such cases system will allow the issue at counter PA login but it will say **Fish off** at supervisor login.
+
+**Solution:**
+For certificates issue, different account number will be allotted for each certificate even though they are having same registration number. Entered SB cheque number will be allotted to the very first certificate of a particular registration number. We can distinguish the first and last certificates by the account numbers as they are in ascending order. Before proceeding, verify all other transactions for clear view.
+1. Invoke **HFTI** menu
+2. Enter Entry user id of the counter PA
+3. Select Transaction status as Entered
+4. Click on GO (F4)
+5. System will display the transaction IDs and A/C IDs which are not verified.
+6. Note down the very first transaction ID, Its Debit A/C ID which is SB Account ID, Credit A/C ID which is the account ID allotted to the first certificate and the amount of transaction.
+7. Delete the noted down transaction ID using **HTM** menu in counter PA login after confirming the presence of cheque number in HTM menu.
+8. Verify the registration number in supervisor login.
+9. Now we have to add the deleted transaction again using **HTM** menu
+10. Invoke **HTM** menu
+11. Function - Add
+12. Transaction type/subtype – Customer Induced
+13. Click on GO (F4)
+14. Enter A/C ID - Customer’s SB A/C ID
+15. Enter the amount
+16. Click on ADD
+17. Enter A/C ID – Certificate A/C ID which we have noted earlier.
+18. Click on Contra-Adjustment button (3=3) beside the amount field.
+19. Click on POST
+20. Verify the Transaction ID in the same menu in supervisor login.
+21. Continue for certificate printing using **HDRP** menu.
+
+## 13.4 Certificates/Accounts migrated to Finacle with wrong Date of Issue/Date of opening or wrong deposit amount
+
+Inform the matter to your divisional head along with appropriate documents showing correct date of opening/deposit amounts. Divisional heads should cross check the details with concerned SBCO incharge. Divisional head may give permission for manual closure after necessary enquiry. Then after obtaining permission from divisional head follow the procedure explained in **Case 2 of section 13.2** and close the accounts in finacle and transfer the closure proceeds to SOLID+0340. Then calculate the actual maturity values of the accounts and issue RBI cheques for correct maturity values.
+
+## 13.5 Discharge of Certificates which are not migrated into finacle
+
+Inform the matter to your divisional head along with appropriate documents showing correct date of opening/deposit amounts. Divisional heads should cross check the details with concerned SBCO incharge. Divisional head may give permission for manual closure after necessary enquiry. Then after obtaining permission from divisional calculate the actual maturity values of the accounts and issue RBI cheques for correct maturity values.
+
+## 13.6 Problems in verification of SB Account closure
+
+Before reading the following section, see all the notes in **section 1.5**
+In some cases, System will allow the SB closure at counter PA login but it will show some error when we try to verify that closure in supervisor login even though there are no interest credit accounts linked to that SB A/C and also days after the closure of the accounts linked to the SB account.
+In this case Current year interest will be generated for that SB account but the account closure verification shows some error.
+
+**Solution:**
+1. If the system shows an error while verifying the closed SB account, do the following procedure
+2. Note Down the transaction id related to the SB closure using **HFTI** menu.
+3. Modify that Transaction id and POST it using **HTM** menu
+4. Verify the closure in supervisor login.
+5. If the system still shows an error while verifying the Closure at supervisor login, Do the following procedure
+6. Cancel the closure at supervisor login.
+7. Do the Closure Again in PA login.
+8. Verify the closure at supervisor end.
+
+**Note:** If the SB Account is Silent account then, System shows an error while posting the transaction id as given in step 3 above. Then do the following procedure
+9. Delete that Transaction id using **HTM** menu
+10. Revive the SB Account using **CASBAM** menu
+11. Close the Account.
+12. If the system shows the error at verification then do the above stated procedure from step 2 to step 8 again.
+
+## 13.7 SB Accounts migrated to Finacle with wrong Account balance
+
+First check the transactions in finacle/sanchay post with entries in Passbook. Find out which entries are missing. Inform the matter to your divisional head along with appropriate documents showing transactions of missing entries. Divisional heads should cross check the details with concerned SBCO incharge. Divisional head may give permission for deposits/withdrawals after necessary enquiry. Then after obtaining permission from divisional head follow the procedure below.
+
+**Case 1: Excess balance transferred to SB**
+1. Invoke menu **CXFER**
+2. Choose function as ADD and transaction type/sub type as Bank Induced.
+3. Click on GO (F4)
+4. Enter Dr account Id as Customer sb ac no.
+5. Enter Cr account id as SOLID+0340
+6. Enter appropriate remarks
+7. Click on submit (F10) and note the tran id
+8. Verify the tran id in same menu in supervisor login
+
+**Case 2: Less balance transferred to SB**
+1. Invoke menu **CXFER**
+2. Choose function as ADD and transaction type/sub type as Bank Induced.
+3. Click on GO (F4)
+4. Enter Dr account id as SOLID+0340
+5. Enter Cr account Id as Customer sb ac no.
+6. Enter appropriate remarks
+7. Click on submit (F10) and note the tran id
+8. Verify the tran id in same menu in supervisor login
+
+## 13.8 Accounts wrongly opened without selecting the Agents
+
+**Case 1 RD accounts**
+Link the rd account to agent id by following the process explained in **section 2.12** . As agent commission won’t be credited, we have to manually deposit the commission to agent SB account as explained below.
+1. Invoke menu **CXFER**
+2. Choose function as ADD and transaction type/sub type as Bank Induced.
+3. Click on GO (F4)
+4. Enter Dr account id as SOLID+0323
+5. Enter Cr account Id as agent SB ac no.
+6. Enter appropriate remarks
+7. Click on submit (F10) and note the tran id
+8. Verify the tran id in same menu in supervisor login
+
+**Case 2: Other TDA accounts**
+If you forget to select agent id while opening accounts like NSC/KVP/TD/MIS agent commission won’t be credited to agent SB account. You need link the agent id but you have to pay commission by following the procedure as show above in **Case 1**.
+
+## 13.9 RD Accounts migrated to Finacle with wrong Account balance
+
+**Case 1: Short amount transferred to RD**
+First check the transactions in finacle/sanchay post with entries in Passbook. Find out which entries are missing. Inform the matter to your divisional head along with appropriate documents showing transactions of missing entries. Divisional heads should cross check the details with concerned SBCO incharge. Divisional head may give permission for deposits after necessary enquiry. Then after obtaining permission from divisional head follow the procedure below.
+1. Invoke **CRDP** menu
+2. Choose function as Add
+3. Choose transaction type as Bank Induced
+4. Click on GO (F4)
+5. Enter account id
+6. Enter transaction amount
+7. Choose transaction type as Transfer
+8. Enter account id as SOLID+0326
+9. Enter transfer amount
+10. Click on SUBMIT (F10)
+11. Verify the tran id using same menu in supervisor login.
+12. This entry will come in LOT. Round off the amount and deduct the amount from RD deposit amount. We won’t account for this entry as it was already accounted for before.
+
+**Case 2: Excess amount transferred to finacle**
+First finalize how much amount has been transferred in excess. Then account for this excess amount in RD deposit in receipts side and on payment side show the same amount in UCP. Then report the matter to your divisional that the amount was shown in UCP. Contact the customer and try to explain the matter to customer. Collect the excess deposit amount from customer and credit the recovered amount in UCR. Make proper remarks that this UCR amount was in contra to UCP that was shown earlier. This is the correct procedure you to follow.
+
+## 13.10 RD Standing Instruction not executed due to Finacle Problem
+
+**This process has been disabled at present. See the alternative procedure given at the end.**
+To execute the standing instruction manually i.e., when any standing instruction not executed due to system fault we can execute using this menu in India post finacle. Following procedure is the India post finacle guide for manual execution of standing instruction.
+1. First identify the standing instruction number
+   a) Invoke **HSSIM** menu
+   b) Function - Inquire
+   c) Click on the searcher beside Standing instruction sl no.
+   d) Enter Account number (For RD standing instruction, enter RD account number)
+   e) Click on SUBMIT (F10)
+   f) Note down the Standing instruction sl no.
+2. Invoke **HSSIM** menu
+3. Function - Modify
+4. Enter Standing instruction sl no. (Which we have found earlier)
+5. Click on GO (F4)
+6. Then in the header details
+   a) Select execution time as "ANYTIME"
+   b) Next execution date as "EOD date (current date)"
+7. Click on SUBMIT (F10)
+8. Verify the Standing instruction sl no. in the same menu in supervisor login.
+
+Next Step is
+1. Invoke **HSIE** menu
+2. Select execution time as "ANYTIME"
+3. Click on SUBMIT (F10)
+4. Then finally take the report from **HFINRPT**.
+5. Invoke **HPR** to view the report
+
+Next Step is
+1. Invoke **HSSIM** menu
+2. Function - Modify
+3. Enter Standing instruction sl no.
+4. Click on GO (F4)
+5. In header details
+   a) Change execution time as "B-after change of date"
+   b) Next execution date as "next due date for execution" (15th of next month)
+6. Click on SUBMIT (F10)
+7. Verify the Standing instruction sl no. in the same menu in supervisor login.
+**Note:** Generally standing instruction will be failed in some cases even though Sb account is having enough balance due to technical problem at the central server.
+
+**Alternate Procedure as of now:**
+Add one more standing Instruction from SB to RD with 15th of Next month as the next execution date. On 15th of Next month, two Standing Instructions will be executed for that particular RD account. On 16th of next month, Delete 2nd Standing Instruction.
+
+## 13.11 PPF Accounts migrated to Finacle with wrong Account balance
+
+If you find any mistakes in PPF balances then first compare the Passbook entries with the ledger available at the office. Give proper IRs and calculate correct interests. Then create the correct ledger in excel format. Report the matter to divisional head and get appropriate permissions.
+In finacle we have to close the account showing as transfer out to bank. Then with the correct ledger entries transfer the account in again. This way we can update the account with correct entries.
+To transfer out the account to bank follow the procedure in **section 5.13** of this book
+To transfer in the account follow the procedure in **section 5.14** of this book.
+
+## 13.12 Procedure to find the forgotten instruction number when an account is transferred using HACXFSOL
+
+Generally in DOP Finacle we use the menu **HACXFSOL** to transfer the account from one SOL ID to another SOL ID.
+Suppose if the account transfer is completed in the Counter level and by mistake for any reason if the counter PA forgot to note down the instruction number we can trace the instruction number by using the menu **HAFI**.
+
+**Procedure:**
+1. Invoke **HAFI** menu
+2. Enter the Table Short Name as "ATT"
+3. Give two blank spaces in the Ref. No. field.
+4. Enter the filed Entered By as "User name of the person who have done transfer transaction"
+5. Enter the field Entered on as "Enter the date of transaction"
+6. Select the Authorized option as "Not Authorized"
+7. Click on GO(F4)
+8. System will display the unverified instruction numbers.
+
+## 13.13 Procedure to find the forgotten Instruction number when an account scheme is changed using HACXFRSC
+
+Generally we use the menu **HACXFRSC** to change the scheme code of an account i.e., for example if we want to change the SB normal account to cheque account.
+When we change the scheme code of an account at Counter level the system will generate the instruction number for any reason if the user forget to note down the instruction number we can trace the number using the menu **HAFI**.
+
+**Procedure:**
+1. Invoke **HAFI** menu
+2. Enter the table short name as "SCT"
+3. Give two blank spaces in the Ref. No field
+4. Enter the field Entered By as "User name of the person who have done transaction"
+5. Enter the field Entered on as "Date of transaction"
+6. Select the Authorized option as "All"
+7. Click on GO(F4)
+8. Then the system will display the list of unverified instruction numbers.
+
+## 13.14 Problems with migration of MIS Interest into Finacle
+
+We have seen cases of wrong pending interest transferred to finacle due to irregular data entry in sanchay post. Either excess interest is transferred or short interest is transferred. Let’s see both cases.
+
+**Case 1: Excess interest transferred to finacle.**
+Follow the procedure of interest withdrawal in **case 2 of section 4.3** of this book and transfer the excess amount to postmaster account (SOLID+0340). Make an error entry and report the matter to divisional head.
+
+**Case 2: Short interest transferred to finacle.**
+Report the matter to your divisional head with appropriate documents that interest was not already paid. After obtaining permission from divisional head, manually make the payment.
+
+## 13.15 SSA Excess Deposits
+
+Sukanya accounts are by default Debit frozen in finacle. If you make excess or wrong deposits into sukanya you cannot withdraw them. If you have to withdraw the amount then at first you have to unfreeze it. Let’s see how it is done.
+1. Invoke **HAFSM** menu
+2. Function - Unfreeze
+3. Enter A/C ID
+4. Click on GO (F4)
+5. Select the required A/C numbers
+6. Click on SUBMIT (F10)
+7. Verify the transaction in the same menu in supervisor login
+After unfreezing the account withdraw the excess or wrong deposit amount using **CTM** and verify. After withdrawal is over we have to debit freeze the account. Follow the procedure to debit freeze the account.
+1. Invoke **HAFSM** menu
+2. Function – Debit Freeze
+3. Enter A/C ID or CIF id
+4. Enter Freeze Reason Code
+5. Click on GO (F4)
+6. Select the required A/C number
+7. Click on SUBMIT (F10)
+8. Verify the transaction in the same menu in supervisor login
+Alternately request the customer for the excess deposited amount.
+
+## 13.16 Procedure to find the forgotten transaction ID, Account ID, Registration Number
+
+**Case 1: To find forgotten Transaction ID**
+1. Invoke **HFTI** menu
+2. Enter Entry User ID
+3. Select Transaction Status as
+   a) Entered for RD Deposit, SB Withdrawals above Rs.5000, CXFER transactions above Rs.5000.
+   b) Posted for all other transactions.
+4. Click on GO (F4)
+5. System will display all the transaction according to the selected category.
+
+**Case 2: To find forgotten Account ID**
+1. Invoke **HFTI** menu
+2. Enter Entry User ID
+3. Select Transaction Status as Entered
+4. Click on GO (F4)
+5. System will display the Entered state transactions which includes Account Openings
+
+**Alternately**
+1. Invoke **HAFI** menu
+2. Enter Entered Date as Today’s Date
+3. Select Status as Not Authorized
+4. Enter Entered by field with Counter PA user id
+5. Click on GO (F4)
+6. System will display
+   a) Unverified Account Openings
+   b) Unverified Account Modifications
+   c) Unverified Account Closures
+   d) Unverified Standing Instructions etc.,
+
+**Case 3: To find forgotten Registration Number**
+1. Invoke **CSCOAACV** menu in supervisor login
+2. Enter CIF ID of the customer with which certificate was issued.
+3. Click on the searcher beside the Registration Number
+4. System will display the unverified Registration numbers related to that CIF ID.
+
+## 13.17 Problem with Minor to Major Conversion
+
+By Default, for accounts migrated from sanchaya to finacle, Date of birth of all account holders in CIF IDs including minors is 01/07/1960. For minor accounts status will be minor and date of birth is 01/07/1960 by default. So, the software will not allow us to change the date of birth of the minor directly. So, Follow the below given procedure inorder to change the date of birth of the minor.
+1. Invoke **CMRC** menu
+2. Function – Modify
+3. Enter the CIF ID of the minor
+4. Click on GO (F4)
+5. Select Minor as NO.
+6. Click on SUBMIT (F10)
+7. Verify the CIF ID in the same menu in supervisor login.
+8. Again Invoke **CMRC** in PA login
+9. Function – Modify
+10. Enter the CIF ID of the minor
+11. Click on GO (F4)
+12. Enter the Date of Birth of the Minor who has become major
+13. Click on SUBMIT (F10)
+14. Verify the CIF ID in the same menu in supervisor login.
+15. Then use corresponding account modification menus and change the mode of operation to self (012)
+
+**Account modification menus:**
+* For SB - CASBAM
+* For MIS – CMISAM
+* For TD – CMISAM
+* For SCSS – CSCAM
+* For PPF – CPPFAM
+* For RD – CRDACM
+* For Certificates – CSCACM
+
+**Note:** If the system shows an error "Preferred Document is Mandatory" after submitting then select Preferred Flag as "YES" at Document Details.
+
+## 13.18 Procedure to find the forgotten transaction id during inventory movement using HIMC
+
+In some cases, we forget to note down the transaction id while transferring stock using HIMC menu. Follow the below procedure to know the forgotten transaction id.
+1. Invoke **HIMC** menu in supervisor login
+2. Click on the searcher beside the transaction id field.
+3. Enter From location (From which the stock has been transferred)
+4. Enter To location (To which the stock has been transferred)
+5. Enter the Date
+6. Select the Status as ‘Enter but not authorized’
+7. Click on SUBMIT (F10)
+8. System will display the unverified transaction ids.
+9. Note down the transaction id and verify it using the same menu in supervisor login only.
+
+## 13.19 Solution for “OSL intimation received after migration for the cheques sent for clearance before migration.”
+
+Before Migration, All post offices are instructed not to accept bank cheques from at least one week before the date of migration. But, Due to various reasons, Offices are accepting bank cheques. These cheques will later be cleared or realized and OSL intimation will be received after finacle migration. In such cases, the following procedure has to be observed for:
+
+**1. Account opening**
+In Finacle, OSL accounts are opened by debiting the office account SOL ID + 0382. But, since we have not sent cheques through finacle, the office account SOL ID +0382 will not have sufficient funds. If we have to open the account, we have to credit that particular office account with sufficient funds by debiting the office account SOL ID + 0007 using following procedure.
+1. Invoke **CXFER** menu
+2. Function - Add
+3. Transaction Type/Sub Type – Bank Induced
+4. Click on GO (F4)
+5. Enter Dr A/C ID (SOL ID + 0007)
+6. Enter Cr A/C ID (SOL ID + 0382)
+8. Enter the Amount
+9. Enter the value date (OSL Clearance Date) - **Important**
+10. Enter the cheque number in the Transaction Particulars field (Delete BY TRANSFER and enter the Cheque Number)
+11. Enter OSL particulars in Remarks field
+12. Click on POST
+13. Note down the transaction id and verify the same in the same menu in supervisor login.
+After doing this transaction, you can open the account as usual. Don’t forget to change the value date as OSL clearance date while opening the account also.
+
+**2. Subsequent transactions in RD, RD Bulk, PPF, SSA**
+In Finacle, OSL Subsequent deposits are made by debiting the office account SOL ID + 0017. But, since we have not sent cheques through finacle, the office account SOL ID + 0017 will not have sufficient funds. If we have to make the deposit, we have to credit that particular office account with sufficient funds by debiting the office account SOL ID + 0007 using following procedure.
+1. Invoke **CXFER** menu
+2. Function - Add
+3. Transaction Type/Sub Type – Bank Induced
+4. Click on GO (F4)
+5. Enter Dr A/C ID (SOL ID + 0007)
+6. Enter Cr A/C ID (SOL ID + 0017)
+8. Enter the Amount
+9. Enter the value date (OSL Clearance Date) - **Important**
+10. Enter the cheque number in the Transaction Particulars field (Delete BY TRANSFER and enter the Cheque Number)
+11. Enter OSL particulars in Remarks field
+12. Click on POST
+13. Note down the transaction id and verify the same in the same menu in supervisor login.
+After doing this transaction, you have to follow the normal deposit procedures of respective schemes. Don’t forget to change the value date as OSL clearance date while making the deposit.
+
+**Note 1:** For SB Part II Deposit, Use Debit Account ID as SOL ID + 0007 and Credit Account ID as SB Account ID while doing CXFER transaction. Don’t forget to change the value date as Part II transaction date while making the transaction.
+**Note 2:** For SB Part II Withdrawal, Use Debit Account ID as SB Account ID and Credit Account ID as SOL ID + 0340 while doing CXFER transaction. Don’t forget to change the value date as Part II transaction date while making the transaction.
+**Note 3:** SB Part II Deposit and Withdrawal transaction will be reflected in LOTs. Round-off the transactions and deduct the amount from deposit/withdrawal total.
 `
   }
 ];
