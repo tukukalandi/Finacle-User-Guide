@@ -24,19 +24,19 @@ export function Home({ onSelectModule }: HomeProps) {
 
   const getColorClasses = (color: string) => {
     const colors: Record<string, { border: string, bg: string, iconBg: string }> = {
-      blue: { border: 'hover:border-blue-500', bg: 'group-hover:bg-blue-600', iconBg: 'bg-blue-50 text-blue-600' },
-      emerald: { border: 'hover:border-emerald-500', bg: 'group-hover:bg-emerald-600', iconBg: 'bg-emerald-50 text-emerald-600' },
-      amber: { border: 'hover:border-amber-500', bg: 'group-hover:bg-amber-500', iconBg: 'bg-amber-50 text-amber-600' },
-      purple: { border: 'hover:border-purple-500', bg: 'group-hover:bg-purple-600', iconBg: 'bg-purple-50 text-purple-600' },
-      fuchsia: { border: 'hover:border-fuchsia-500', bg: 'group-hover:bg-fuchsia-600', iconBg: 'bg-fuchsia-50 text-fuchsia-600' },
-      pink: { border: 'hover:border-pink-500', bg: 'group-hover:bg-pink-600', iconBg: 'bg-pink-50 text-pink-600' },
-      rose: { border: 'hover:border-rose-500', bg: 'group-hover:bg-rose-600', iconBg: 'bg-rose-50 text-rose-600' },
-      indigo: { border: 'hover:border-indigo-500', bg: 'group-hover:bg-indigo-600', iconBg: 'bg-indigo-50 text-indigo-600' },
-      cyan: { border: 'hover:border-cyan-500', bg: 'group-hover:bg-cyan-600', iconBg: 'bg-cyan-50 text-cyan-600' },
-      teal: { border: 'hover:border-teal-500', bg: 'group-hover:bg-teal-600', iconBg: 'bg-teal-50 text-teal-600' },
-      orange: { border: 'hover:border-orange-500', bg: 'group-hover:bg-orange-500', iconBg: 'bg-orange-50 text-orange-600' },
-      red: { border: 'hover:border-red-500', bg: 'group-hover:bg-red-600', iconBg: 'bg-red-50 text-red-600' },
-      slate: { border: 'hover:border-slate-500', bg: 'group-hover:bg-slate-600', iconBg: 'bg-slate-50 text-slate-600' },
+      blue: { border: 'border-2 border-blue-100 hover:border-blue-500', bg: 'group-hover:bg-blue-600', iconBg: 'bg-blue-50 text-blue-600' },
+      emerald: { border: 'border-2 border-emerald-100 hover:border-emerald-500', bg: 'group-hover:bg-emerald-600', iconBg: 'bg-emerald-50 text-emerald-600' },
+      amber: { border: 'border-2 border-amber-100 hover:border-amber-500', bg: 'group-hover:bg-amber-500', iconBg: 'bg-amber-50 text-amber-600' },
+      purple: { border: 'border-2 border-purple-100 hover:border-purple-500', bg: 'group-hover:bg-purple-600', iconBg: 'bg-purple-50 text-purple-600' },
+      fuchsia: { border: 'border-2 border-fuchsia-100 hover:border-fuchsia-500', bg: 'group-hover:bg-fuchsia-600', iconBg: 'bg-fuchsia-50 text-fuchsia-600' },
+      pink: { border: 'border-2 border-pink-100 hover:border-pink-500', bg: 'group-hover:bg-pink-600', iconBg: 'bg-pink-50 text-pink-600' },
+      rose: { border: 'border-2 border-rose-100 hover:border-rose-500', bg: 'group-hover:bg-rose-600', iconBg: 'bg-rose-50 text-rose-600' },
+      indigo: { border: 'border-2 border-indigo-100 hover:border-indigo-500', bg: 'group-hover:bg-indigo-600', iconBg: 'bg-indigo-50 text-indigo-600' },
+      cyan: { border: 'border-2 border-cyan-100 hover:border-cyan-500', bg: 'group-hover:bg-cyan-600', iconBg: 'bg-cyan-50 text-cyan-600' },
+      teal: { border: 'border-2 border-teal-100 hover:border-teal-500', bg: 'group-hover:bg-teal-600', iconBg: 'bg-teal-50 text-teal-600' },
+      orange: { border: 'border-2 border-orange-100 hover:border-orange-500', bg: 'group-hover:bg-orange-500', iconBg: 'bg-orange-50 text-orange-600' },
+      red: { border: 'border-2 border-red-100 hover:border-red-500', bg: 'group-hover:bg-red-600', iconBg: 'bg-red-50 text-red-600' },
+      slate: { border: 'border-2 border-slate-100 hover:border-slate-500', bg: 'group-hover:bg-slate-600', iconBg: 'bg-slate-50 text-slate-600' },
     };
     return colors[color] || colors.blue;
   };
@@ -55,7 +55,7 @@ export function Home({ onSelectModule }: HomeProps) {
             <div 
               key={card.id}
               onClick={() => onSelectModule(card.id)}
-              className={`group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md ${colorStyles.border} transition-all cursor-pointer flex flex-col items-center text-center`}
+              className={`group bg-white rounded-2xl p-6 hover:shadow-md ${colorStyles.border} transition-all cursor-pointer flex flex-col items-center text-center`}
             >
               <div className={`h-14 w-14 rounded-full flex items-center justify-center mb-4 ${colorStyles.iconBg} ${colorStyles.bg} group-hover:text-white transition-colors`}>
                 {card.icon}
