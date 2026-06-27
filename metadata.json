@@ -1,0 +1,6 @@
+{
+  "name": "Finacle User Guide",
+  "description": "A guide and reference tool for DOP Finacle procedures, equipped with a search filter and a built-in AI assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
