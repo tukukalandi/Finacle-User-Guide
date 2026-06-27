@@ -178,7 +178,7 @@ export default function App() {
                 
                 <div className="mt-16 pt-8 border-t border-gray-100 flex justify-between items-center text-sm text-gray-400 pb-8">
                   <span>DOP Finacle User Guide Ver 1.1</span>
-                  <span>West Bengal Circle</span>
+                  <span>Dhenkanal Postal Division</span>
                 </div>
               </div>
             </main>

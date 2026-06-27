@@ -63,15 +63,15 @@ export const CATEGORIES: Category[] = [
 export const SECTIONS: ProcedureSection[] = [
   // SECTION - 7 CIF
   {
-    id: '7.1',
-    sectionNumber: '7.1 & 7.2',
+    id: '1.1',
+    sectionNumber: '1.1 & 7.2',
     title: 'About CIF & Searching (CDEDUP)',
     categoryId: 'cif_general',
     content: `
-# 7.1 About CIF
+# 1.1 About CIF
 Customer Information File (CIF) is a unique record of every customer stored in the system. Every individual needs to have a CIF ID to open an account. A customer may have many accounts, but can only have one CIF ID.
 
-# 7.2 Searching a CIF of a customer
+# 1.2 Searching a CIF of a customer
 When any CIF is created in a CBS post office, that CIF can be found using the following procedure:
 
 1. **Menu:** \`CDEDUP\` - Click **Go**
@@ -82,12 +82,12 @@ Use more filters (Postal code, PAN Number, Date of Birth, Preferred Phone No.) f
 `
   },
   {
-    id: '7.3',
-    sectionNumber: '7.3',
+    id: '1.3',
+    sectionNumber: '1.3',
     title: 'New CIF Creation (CCRC)',
     categoryId: 'cif_general',
     content: `
-# 7.3 New CIF Creation
+# 1.3 New CIF Creation
 
 1. **Menu:** \`CCRC\` – Click **Go**
 2. **Function:** Select **Add** – Click **Go**
@@ -112,17 +112,17 @@ Use more filters (Postal code, PAN Number, Date of Birth, Preferred Phone No.) f
 `
   },
   {
-    id: '7.4',
-    sectionNumber: '7.4 to 7.8',
+    id: '1.4',
+    sectionNumber: '1.4 to 7.8',
     title: 'CIF Verification, Modification & Error Handling',
     categoryId: 'cif_general',
     content: `
-# 7.4 CIF Verification Process - By Super
+# 1.4 CIF Verification Process - By Super
 1. **Menu:** \`CCRC\` - Click **Go**
 2. **Function:** Verify – Click **Go**
 3. Enter the **CIF ID**. Click **Submit**, if everything is entered properly. Click **Cancel** if there is anything wrong - click OK.
 
-# 7.5 On verification if Supervisor found a mistake
+# 1.5 On verification if Supervisor found a mistake
 Supervisor has to cancel the verification process by clicking the Cancel button instead of Submit. Follow the below described points to rectify the error.
 
 **CIF Rejection – Done by Super**
@@ -142,7 +142,7 @@ Supervisor has to cancel the verification process by clicking the Cancel button 
 2. Enter the **CIF ID** – Click **Go**
 3. Click **Submit**, if everything is entered properly.
 
-# 7.6 Process of modification of CIF (Modification of existing CIF or migrated CIF)
+# 1.6 Process of modification of CIF (Modification of existing CIF or migrated CIF)
 - Done by Counter PA
 - Preferably **CIF of SB Account** to be taken for modification.
 - All the information like PAN, Fathers name/Husband name, Date of Birth, Gender, KYC status, Document details 1 (Address Proof), Document details 2(Identity Proof), address if not correct, mobile number, TDS Table code or any other fields needs to be modified.
@@ -160,13 +160,13 @@ Supervisor has to cancel the verification process by clicking the Cancel button 
     - **Tax Status:** "PAN card available" if PAN submitted.
 5. Click **Submit** button after doing the proper modification.
 
-# 7.7 Verification Process After Modification - By Supervisor
+# 1.7 Verification Process After Modification - By Supervisor
 1. **Menu:** \`CMRC\` - Click **Go**
 2. **Function:** Verification
 3. Enter the **CIF ID** – Click **Go**
 4. **Submit**
 
-# 7.8 Situations – When CIF has to be Modified
+# 1.8 Situations – When CIF has to be Modified
 1. **On Death** – Procedure shown in Section 7.9
 2. **Minor became Major** – Take fresh KYC Docs & Minor flag changed to "No".
 3. **Name Change** - Procedure shown in Section 7.14
@@ -177,12 +177,12 @@ Supervisor has to cancel the verification process by clicking the Cancel button 
 `
   },
   {
-    id: '7.14',
-    sectionNumber: '7.9 to 7.14',
+    id: '1.14',
+    sectionNumber: '1.9 to 7.14',
     title: 'CIF Modifications, Merger & Inquiries',
     categoryId: 'cif_mod',
     content: `
-# 7.9 Modification of CIF in case of Death/Death Marking
+# 1.9 Modification of CIF in case of Death/Death Marking
 1. **Menu:** \`CMRC\` - Click **Go**
 2. **Function:** Modify
 3. Enter **CIF ID** – Click **Go**
@@ -192,7 +192,7 @@ Supervisor has to cancel the verification process by clicking the Cancel button 
 
 *Supervisor has to verify using same menu \`CMRC\`, Function verify, Enter CIF, Go, Submit.*
 
-# 7.10 Changing The CIF ID of Main (first) Account Holder on account of Death or Account transfer
+# 1.10 Changing The CIF ID of Main (first) Account Holder on account of Death or Account transfer
 1. **Menu:** \`HCCA\` - Click **Go**
 2. **Function:** Modify
 3. **A/c ID:** Enter the A/c ID on which action needed.
@@ -202,11 +202,11 @@ Supervisor has to cancel the verification process by clicking the Cancel button 
 7. **Reason code:** Select \`D\` in case of death claim or \`T\` in case of Certificate Transfer.
 8. Click **Submit**.
 
-# 7.11 Verification of Merger
+# 1.11 Verification of Merger
 1. **Menu:** \`HCCA\`, Function: Verify
 2. Enter **A/c ID**, **Go**, **Submit**.
 
-# 7.12 Merger of CIF (in case more than one CIF exits of a customer)
+# 1.12 Merger of CIF (in case more than one CIF exits of a customer)
 1. **Menu:** \`HCCA\` - Click **Go**
 2. **Function:** Modification
 3. **A/c ID:** Enter the A/c ID on which action needed – Click **Go**
@@ -217,12 +217,12 @@ Supervisor has to cancel the verification process by clicking the Cancel button 
 
 *Supervisor to verify with the same menu \`HCCA\` (See Section 7.11).*
 
-# 7.13 Inquire the accounts opened under one CIF ID
+# 1.13 Inquire the accounts opened under one CIF ID
 1. **Menu:** \`HCRV\` - Click **Go**
 2. Click **Accounts** TAB to open Accounts page.
 3. Enter the **CIF ID** and Click **Go**
 
-# 7.14 Name Change in CIF & Account Number
+# 1.14 Name Change in CIF & Account Number
 Name of CIF can be changed. But it will not get effected in Account Level as this CIF is already been linked. For changing the name in all the accounts also, following steps have to be done:
 1. Modification of Name at CIF Level- Menu \`CMRC\`
 2. Verification of CIF – Menu \`CMRC\`
@@ -292,12 +292,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
   },
   // GENERAL & RULES
   {
-    id: '11.1',
-    sectionNumber: '11.1',
+    id: '2.1',
+    sectionNumber: '2.1',
     title: 'About Recurring Deposit',
     categoryId: 'general',
     content: `
-# 11.1 About Recurring Deposit
+# 2.1 About Recurring Deposit
 
 * The customer can open an RD account for a fixed amount and for a fixed period of **60 months**. After 60 months it can be further **extended for the period of 60 months** where there will be no default installment.
 * An RD account can be opened for single or with joint holders with nomination facility. There will not be any nomination facility provided for minor accounts. Joint account can be opened by two adults.
@@ -319,12 +319,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
   
   // ACCOUNT OPENING
   {
-    id: '11.2',
-    sectionNumber: '11.2',
+    id: '2.2',
+    sectionNumber: '2.2',
     title: 'RD Account Open',
     categoryId: 'account_open',
     content: `
-# 11.2 RD Account Open
+# 2.2 RD Account Open
 
 > **Note:** While opening RD a/c instalment amount will be in Entered level and agent commission will be in Posted level.
 
@@ -370,12 +370,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.3',
-    sectionNumber: '11.3',
+    id: '2.3',
+    sectionNumber: '2.3',
     title: 'Verification of RD Account Open',
     categoryId: 'account_open',
     content: `
-# 11.3 Verification of RD Account Open
+# 2.3 Verification of RD Account Open
 
 1. **Menu:** \`CRDOAACV\` – Click **Go**
 2. **Function:** V-Verify
@@ -387,12 +387,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 
   // DEPOSITS
   {
-    id: '11.4',
-    sectionNumber: '11.4',
+    id: '2.4',
+    sectionNumber: '2.4',
     title: 'RD Installment Deposit when Account stands at HO/SO',
     categoryId: 'deposits',
     content: `
-# 11.4 RD Installment Deposit when Account stands at HO/SO
+# 2.4 RD Installment Deposit when Account stands at HO/SO
 
 > **Note 1:** Any RD deposit transaction will be in Entered State. In case of wrong deposit made, transaction may be deleted using Delete function. After verification of RD deposit transaction, amount is posted in ledger and verified as well. So, after the verification the transaction can not be deleted.
 > **Note 2:** If in any RD account, within the deposit period (1-15 or 16-last working day - which is applicable to the account) more than once, instalment is deposited and total instalment no is 6 or 12, rebate will be shown by the system.
@@ -430,12 +430,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.5',
-    sectionNumber: '11.5',
+    id: '2.5',
+    sectionNumber: '2.5',
     title: 'RD instalment deposit verification',
     categoryId: 'deposits',
     content: `
-# 11.5 RD instalment deposit verification
+# 2.5 RD instalment deposit verification
 
 1. **Menu:** \`CRDP\` – Click **Go**
 2. **Function:** Post
@@ -445,12 +445,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.6',
-    sectionNumber: '11.6',
+    id: '2.6',
+    sectionNumber: '2.6',
     title: 'RD Installment Deposit when Account stands at BO',
     categoryId: 'deposits',
     content: `
-# 11.6 RD Installment Deposit when Account stands at BO
+# 2.6 RD Installment Deposit when Account stands at BO
 
 1. **Menu:** \`CRDP\` – Click **Go**
 2. **Function:** A-Add
@@ -470,12 +470,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 
   // STANDING INSTRUCTIONS
   {
-    id: '11.7',
-    sectionNumber: '11.7',
+    id: '2.7',
+    sectionNumber: '2.7',
     title: 'Standing Instruction Overview',
     categoryId: 'si',
     content: `
-# 11.7 Standing Instruction
+# 2.7 Standing Instruction
 
 * **SI always initiates from SB Account.** From one SB account funds may be transferred to another SB or an RD account or multiple RD account. It may also be transferred from one SB account to Multiple SB Account or from Multiple SB account to a Single SB account.
 * Standing Instructions (SI) is a facility for the account holders who want to make payments or remittances of a recurring nature, like transfer of funds, instalments for a recurring deposit or a loan account and so on.
@@ -486,12 +486,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.8',
-    sectionNumber: '11.8',
+    id: '2.8',
+    sectionNumber: '2.8',
     title: 'SB to RD SI Procedure',
     categoryId: 'si',
     content: `
-# 11.8 SB to RD SI Procedure
+# 2.8 SB to RD SI Procedure
 
 1. **Menu:** \`HSSIM\` – Click **Go**
 2. **Function:** Select **A-Add**
@@ -523,12 +523,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.9',
-    sectionNumber: '11.9',
+    id: '2.9',
+    sectionNumber: '2.9',
     title: 'SB to RD SI Verification',
     categoryId: 'si',
     content: `
-# 11.9 SB to RD SI Verification
+# 2.9 SB to RD SI Verification
 
 1. **Menu:** \`HSSIM\` – Click **Go**
 2. **Function:** Select **V-Verify**
@@ -539,12 +539,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.22',
-    sectionNumber: '11.22',
+    id: '2.22',
+    sectionNumber: '2.22',
     title: 'Deleting SI linked to RD',
     categoryId: 'si',
     content: `
-# 11.22 Deleting SI linked to RD
+# 2.22 Deleting SI linked to RD
 
 1. **Menu:** \`HSSIM\` – Click **Go**
 2. **Function:** D-Delete
@@ -561,12 +561,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 
   // LOANS AND WITHDRAWALS
   {
-    id: '11.10',
-    sectionNumber: '11.10',
+    id: '2.10',
+    sectionNumber: '2.10',
     title: 'About Loan/Half Withdrawal against RD',
     categoryId: 'loan',
     content: `
-# 11.10 About Loan/Half Withdrawal against RD
+# 2.10 About Loan/Half Withdrawal against RD
 
 * **Only one loan/half withdrawal** against RD account would be allowed during the tenure of the account.
 * For loan/half withdrawal against Recurring Deposit, **amount not exceeding 50%** of the outstanding balance in the account can be sanctioned minimum after one year of A/c opening where minimum twelve deposit instalments are collected.
@@ -577,12 +577,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.11',
-    sectionNumber: '11.11',
+    id: '2.11',
+    sectionNumber: '2.11',
     title: 'RD Loan Account Opening',
     categoryId: 'loan',
     content: `
-# 11.11 RD Loan Account Opening
+# 2.11 RD Loan Account Opening
 
 1. **Menu:** \`CAOLARD\` – Click **Go**
 2. Enter **RD A/c No** and click outside.
@@ -597,12 +597,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.12',
-    sectionNumber: '11.12',
+    id: '2.12',
+    sectionNumber: '2.12',
     title: 'Verification Of Loan Account Opening',
     categoryId: 'loan',
     content: `
-# 11.12 Verification Of Loan Account Opening
+# 2.12 Verification Of Loan Account Opening
 
 1. **Menu:** \`CAOVLARD\` – Click **Go**
 2. **Function:** V-Verify
@@ -612,12 +612,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.13',
-    sectionNumber: '11.13',
+    id: '2.13',
+    sectionNumber: '2.13',
     title: 'Disbursement of Loan',
     categoryId: 'loan',
     content: `
-# 11.13 Disbursement of Loan
+# 2.13 Disbursement of Loan
 
 > **Warning:** If the office is migrated in the middle of the month (i.e. on or after 2nd of the month) **"Error P39"** will come at the time of verification of disbursement if the mode of payment is cash. This error will be thrown only in the month of migration and from the 2nd month cash mode can be used for repayment or disbursement. In case of Loan Disbursement or Loan Repayment, the value date will be automatically changed to 1st of the month as interest is calculated from the 1st of the month for loans. As Cash account of that office will not be available as on 1st (since the office has migrated in the middle of the month) this error is thrown.
 
@@ -637,12 +637,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.14',
-    sectionNumber: '11.14',
+    id: '2.14',
+    sectionNumber: '2.14',
     title: 'Disbursement of Loan Verification',
     categoryId: 'loan',
     content: `
-# 11.14 Disbursement of Loan Verification
+# 2.14 Disbursement of Loan Verification
 
 1. **Menu:** \`LARDD\` – Click **Go**
 2. **Function:** VERIFY
@@ -651,12 +651,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.15',
-    sectionNumber: '11.15',
+    id: '2.15',
+    sectionNumber: '2.15',
     title: 'Repayment of loan/part payment of loan',
     categoryId: 'loan',
     content: `
-# 11.15 Repayment of loan/part payment of loan
+# 2.15 Repayment of loan/part payment of loan
 
 > **Warning:** In case of repayment of loan also the **"error P39"** will come in case of cash mode, if the office migrated in the middle of the month (on or 2nd of the month). Avoid cash mode. Use transfer option and debit customer's SB account for payment of loan installment. From the 2nd month (after migration to CBS) onwards cash mode can be used for loan installment payment.
 
@@ -672,12 +672,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.16',
-    sectionNumber: '11.16',
+    id: '2.16',
+    sectionNumber: '2.16',
     title: 'Repayment of loan verify',
     categoryId: 'loan',
     content: `
-# 11.16 Repayment of loan verify
+# 2.16 Repayment of loan verify
 
 1. **Menu:** \`HLAUPAY\` – Click **Go**
 2. **Function:** Verify
@@ -687,12 +687,12 @@ HCRV acts as a centralized 360-degree look into a customer’s entire footprint 
 `
   },
   {
-    id: '11.17',
-    sectionNumber: '11.17',
+    id: '2.17',
+    sectionNumber: '2.17',
     title: 'Closer of loan account',
     categoryId: 'loan',
     content: `
-# 11.17 Closer of loan account
+# 2.17 Closer of loan account
 
 **Step 1: Final payment of loan amount + Loan Interest or only Loan Interest payment (Remaining Loan Amount if any + Loan Interest)**
 There may be situation that customer wants to pay both Loan amount and loan interest when he/she is paying the last installment of loan or there may be situation that only loan interest payment is outstanding and customer wants to pay it. In both the situation the following procedure is to apply.
@@ -730,12 +730,12 @@ There may be situation that customer wants to pay both Loan amount and loan inte
 
   // ACCOUNT CLOSURE
   {
-    id: '11.18',
-    sectionNumber: '11.18',
+    id: '2.18',
+    sectionNumber: '2.18',
     title: 'About RD Account closer',
     categoryId: 'closure',
     content: `
-# 11.18 About RD Account closer
+# 2.18 About RD Account closer
 
 * RD account closer may have different situations – only in case of normal maturity closer where PMI also not generated (1 month not elapsed after maturity) – Trial Close is not required.
 * In all other cases **Trial closer of RD A/c is mandatory** to see the result.
@@ -751,12 +751,12 @@ There may be situation that customer wants to pay both Loan amount and loan inte
 `
   },
   {
-    id: '11.19',
-    sectionNumber: '11.19',
+    id: '2.19',
+    sectionNumber: '2.19',
     title: 'RD Closer – Normal Matured Account',
     categoryId: 'closure',
     content: `
-# 11.19 RD Closer – Normal Matured Account
+# 2.19 RD Closer – Normal Matured Account
 
 1. **Menu:** \`CRDCAAC\` – Click **Go**
 2. **Function:** Z-Close/T-Trial Close
@@ -772,12 +772,12 @@ There may be situation that customer wants to pay both Loan amount and loan inte
 `
   },
   {
-    id: '11.20',
-    sectionNumber: '11.20',
+    id: '2.20',
+    sectionNumber: '2.20',
     title: 'RD Death Claim Closer',
     categoryId: 'closure',
     content: `
-# 11.20 RD Death Claim Closer
+# 2.20 RD Death Claim Closer
 
 1. **Menu:** \`CRDCAAC\` – Click **Go**
 2. **Function:** Z-Close/T-Trial Close
@@ -797,12 +797,12 @@ This has to be verified by Super with the same menu \`CRDCAAC\`.
 `
   },
   {
-    id: '11.21',
-    sectionNumber: '11.21',
+    id: '2.21',
+    sectionNumber: '2.21',
     title: 'Branch office RD Closer',
     categoryId: 'closure',
     content: `
-# 11.21 Branch office RD Closer
+# 2.21 Branch office RD Closer
 
 1. On receipt of SB7A and Passbook from BO, PA should first invoke **Trial Closure** for issue of closing sanction. Same procedure should be followed as being followed for Trial Closure of RD Accounts standing at SO/HO in Finacle.
 2. Enter closing amount in SB7A and after following laid down process of sanction of BO W/D, Passbook and SB7A should be sent to BO with the direction that sanction is valid only up to last working day of the month.
@@ -822,12 +822,12 @@ This has to be verified by Super with the same menu \`CRDCAAC\` Transaction will
 `
   },
   {
-    id: '11.24',
-    sectionNumber: '11.24',
+    id: '2.24',
+    sectionNumber: '2.24',
     title: 'Different situations in RD Account closer',
     categoryId: 'closure',
     content: `
-# 11.24 Different situations in RD Account closer
+# 2.24 Different situations in RD Account closer
 
 ## A. Matured RD Closer
 
@@ -866,12 +866,12 @@ This has to be verified by Super with the same menu \`CRDCAAC\` Transaction will
 `
   },
   {
-    id: '11.27',
-    sectionNumber: '11.27',
+    id: '2.27',
+    sectionNumber: '2.27',
     title: 'RD Extension',
     categoryId: 'closure',
     content: `
-# 11.27 RD Extension
+# 2.27 RD Extension
 
 RD Account can be extended for further period of 5 years. If there are pending installments, extension is not possible. Pending installment can be checked using menu \`HPLIST\`.
 
@@ -886,12 +886,12 @@ RD Account can be extended for further period of 5 years. If there are pending i
 `
   },
   {
-    id: '11.28',
-    sectionNumber: '11.28',
+    id: '2.28',
+    sectionNumber: '2.28',
     title: 'Maturity Date Deferment in RD account',
     categoryId: 'closure',
     content: `
-# 11.28 Maturity Date Deferment in RD account
+# 2.28 Maturity Date Deferment in RD account
 
 Customer has the liberty to have maximum of 4 defaults on the day of maturity. Maturity date can be deferred equivalent to the number of defaults using the menu \`PMDDRD\` (Maturity Date Deferment for Recurring Deposit). During the deferred period, defaults deposits can be paid without default fee. Verify it with super with the same menu.
 `
@@ -899,14 +899,14 @@ Customer has the liberty to have maximum of 4 defaults on the day of maturity. M
 
   // BULK POSTING & AGENTS
   {
-    id: '11.23',
-    sectionNumber: '11.23',
+    id: '2.23',
+    sectionNumber: '2.23',
     title: 'Linking and Delinking RD agent from an account',
     categoryId: 'bulk_agent',
     content: `
-# 11.23 Linking and Delinking RD agent from an account
+# 2.23 Linking and Delinking RD agent from an account
 
-## 11.23.1 Linking agent
+## 2.23.1 Linking agent
 1. **Menu:** \`CRDACM\` - Click **Go**
 2. **Function:** Modify
 3. Enter **RD A/c ID**, Click **Go**
@@ -915,7 +915,7 @@ Customer has the liberty to have maximum of 4 defaults on the day of maturity. M
 6. **Submit**
 7. Verify the modification with super – Same menu \`CRDACM\`. Function- **verify**.
 
-## 11.23.2 De-Linking agent
+## 2.23.2 De-Linking agent
 1. **Menu:** \`CRDACM\` - Click **Go**
 2. **Function:** Modify
 3. Enter **RD A/c ID**, Click **Go**
@@ -925,12 +925,12 @@ Customer has the liberty to have maximum of 4 defaults on the day of maturity. M
 `
   },
   {
-    id: '11.25',
-    sectionNumber: '11.25',
+    id: '2.25',
+    sectionNumber: '2.25',
     title: 'Posting of Reference no. generated in Agent Portal (RD bulk posting)',
     categoryId: 'bulk_agent',
     content: `
-# 11.25 Posting of Reference no. generated in Agent Portal (RD bulk posting)
+# 2.25 Posting of Reference no. generated in Agent Portal (RD bulk posting)
 
 * For bulk acceptance of RD deposits from MPKBY Agents/PRSS Leaders, an Agent Portal has been developed which can be accessed through **www.Indiapost.gov.in** website.
 * Any RD account during opening or after opening can be attached with any MPKBY Agent/PRSS Leaders. Once account is attached to the agent, deposit cannot be accepted at the counter in that account unless depositor gives in writing to cancel the attachment with agent.
@@ -954,27 +954,27 @@ Customer has the liberty to have maximum of 4 defaults on the day of maturity. M
 `
   },
   {
-    id: '11.26',
-    sectionNumber: '11.26',
+    id: '2.26',
+    sectionNumber: '2.26',
     title: 'RD Bulk Posting by DOP and Non dop cheque',
     categoryId: 'bulk_agent',
     content: `
-# 11.26 RD Bulk Posting by DOP and Non dop cheque
+# 2.26 RD Bulk Posting by DOP and Non dop cheque
 
-## 11.26.1 Posting by DOP Cheque
+## 2.26.1 Posting by DOP Cheque
 Agent While preparing the schedule will select payment mode as **DOP Cheque**. Cheque details has to be provided also. At the time posting by \`HAGTXP\` every details will be shown. **Post**.
 
-## 11.26.2 Posting by Non-DOP Cheque
+## 2.26.2 Posting by Non-DOP Cheque
 Agent While preparing the schedule will select payment mode as **Non-DOP Cheque**. Cheque details and bank name has to be provided also. After clearing of the cheque office account \`SOLID0017\` has to be checked to see whether amount credited properly before proceed to posting. At the time posting by \`HAGTXP\` every details will be shown. **Post**.
 `
   },
   {
-    id: '11.30',
-    sectionNumber: '11.30',
+    id: '2.30',
+    sectionNumber: '2.30',
     title: 'PRSS Bulk List Posting',
     categoryId: 'bulk_agent',
     content: `
-# 11.30 PRSS Bulk List Posting
+# 2.30 PRSS Bulk List Posting
 
 Bulk List Creation option available in Agent Portal can be used by PRSS agents to generate bulk list.
 
@@ -984,12 +984,12 @@ Menu for posting Bulk PRSS is \`CPAGTXP\`.
   
   // MISCELLANEOUS / VIEW
   {
-    id: '11.29',
-    sectionNumber: '11.29',
+    id: '2.29',
+    sectionNumber: '2.29',
     title: 'View Pending Installment in RD',
     categoryId: 'general',
     content: `
-# 11.29 View Pending Installment in RD
+# 2.29 View Pending Installment in RD
 
 To view pending installment of RD account \`HPLIST\` menu is used.
 
@@ -1009,12 +1009,12 @@ These are "N", "D", "A", "P"
   
   // SECTION - 16 AGENT PORTAL
   {
-    id: '16.1',
-    sectionNumber: '16.1',
+    id: '2.31',
+    sectionNumber: '2.31',
     title: 'Addition of an Agent',
     categoryId: 'bulk_agent',
     content: `
-# 16.1 Addition of an Agent
+# 2.31 Addition of an Agent
 
 1. **Menu:** \`HDSAMM\` – Click **Go**
 2. **Function:** A-Add
@@ -1045,12 +1045,12 @@ These are "N", "D", "A", "P"
 `
   },
   {
-    id: '16.2',
-    sectionNumber: '16.2',
+    id: '2.32',
+    sectionNumber: '2.32',
     title: 'Addition of an Agent Verification',
     categoryId: 'bulk_agent',
     content: `
-# 16.2 Addition of an Agent Verification
+# 2.32 Addition of an Agent Verification
 
 1. **Menu:** \`HDSAMM\` – Click **Go**
 2. **Function:** V-Verify
@@ -1061,12 +1061,12 @@ These are "N", "D", "A", "P"
 `
   },
   {
-    id: '16.3',
-    sectionNumber: '16.3',
+    id: '2.33',
+    sectionNumber: '2.33',
     title: 'Procedure to copy an Agent',
     categoryId: 'bulk_agent',
     content: `
-# 16.3 Procedure to copy an Agent
+# 2.33 Procedure to copy an Agent
 
 1. **Menu:** \`HDSAMM\` – Click **Go**
 2. **DSA ID:** Select one DSA ID from searcher
@@ -1315,12 +1315,12 @@ For SCSS Account, 15H/15G Must be Entered in Two levels.
   },
   // SB SECTIONS
   {
-    id: 'sb_8.1_8.6',
-    sectionNumber: '8.1 - 8.6',
+    id: 'sb_3.1_8.6',
+    sectionNumber: '3.1 - 8.6',
     title: 'Opening & Modification',
     categoryId: 'sb_general',
     content: `
-# 8.1 About Post Office Savings Bank Account (SB Account)
+# 3.1 About Post Office Savings Bank Account (SB Account)
 * Interest payable Rate is 4% per Annum.
 * Minimum Amount for opening A/c is Rs. 20/- and No maximum balance limit is there.
 * Account can be opened by cash only.
@@ -1340,7 +1340,7 @@ For SCSS Account, 15H/15G Must be Entered in Two levels.
 * Inter Post office transactions can be done between CBS post offices. This type of transaction is called Intersol transaction in CBS.
 * ATM/Debit Cards can be issued to Savings Account holders (having prescribed minimum balance on the day of issue of card) of CBS Post offices.
 
-# 8.2 Opening of SB Account
+# 3.2 Opening of SB Account
 *All the mandatory fields must be entered. Mandatory fields are marked as red asterisk (*)*
 1. **Menu:** \`CASBAO\` – Click **Go**
 2. **Function:** O-Open (Default)
@@ -1362,20 +1362,20 @@ For SCSS Account, 15H/15G Must be Entered in Two levels.
 14. **Submit:** A/c ID will be generated, note it on AOF in Red Ink. Zero("0") Balance account will be opened.
 *Note: Any Account Number(SB/TD/RD/MIS/SCSS/NSC etc.) generated in finacle is 10 digit number.*
 
-# 8.3 Verification of SB Account (By Supervisor)
+# 3.3 Verification of SB Account (By Supervisor)
 1. **Menu:** \`CASBAV\` – Click **Go**
 2. **Function:** V-Verify
 3. Enter the **A/C ID**
 4. **Submit** if everything is made correct. Cancel it if anything wrong. But super don't have to reject.
 
-# 8.4 Modification before verification [by same operator]
+# 3.4 Modification before verification [by same operator]
 1. **Menu:** \`CASBAOM\` – Click **Go**
 2. **Function:** M-Modify
 3. Enter **Account ID** – Click **Go**
 4. Modify the required field. [some fields may not be modified]
 5. Click **Submit**
 
-# 8.5 Modification of existing SB Account
+# 3.5 Modification of existing SB Account
 1. **Menu:** \`CASBAM\` – Click **Go**
 2. **Function:** M-Modify
 3. Enter **Account ID** – Click **Go**
@@ -1387,7 +1387,7 @@ For SCSS Account, 15H/15G Must be Entered in Two levels.
 5. Click **Submit**
 *Verification by a Supervisor menu \`CASBAM\`. Function - Verify*
 
-# 8.6 To make Silent A/c Active
+# 3.6 To make Silent A/c Active
 1. **Menu** \`CASBAM\` - Click **Go**.
 2. **Function** – Modify.
 3. **Account status:** Click "Live" Option.
@@ -1397,11 +1397,11 @@ For SCSS Account, 15H/15G Must be Entered in Two levels.
   },
   {
     id: 'sb_transactions_8.11',
-    sectionNumber: '8.11, 8.13, 8.14, 8.16, 8.17',
+    sectionNumber: '3.11, 8.13, 8.14, 8.16, 8.17',
     title: 'Cash/Cheque Transactions & Rectification',
     categoryId: 'sb_transactions',
     content: `
-# 8.11 SB Transactions
+# 3.11 SB Transactions
 
 **8.11.1 SB Cash Deposit By Counter PA**
 1. **Menu:** \`CTM\` – Click **Go**
@@ -1456,7 +1456,7 @@ For SCSS Account, 15H/15G Must be Entered in Two levels.
 * **Note 3:** Transaction ID if not found due to any reason may be obtained using HFTI Menu, in case of transactions which are in Entered/Verified/Posted stage. Transactions which are in Verified/Posted stage may be obtained using HACLI Menu.
 * **Note 4:** Always Check Effective Available Balance before withdrawal. If withdrawal amount is more than available balance - In case of withdrawal amount is 5000/- and below, error is thrown during transaction by CPA. If amount is 5001/- and above, CPA will not get any exception or error but the Supervisor will get an error. In that case the transaction will be in entered stage and may be deleted using HTM menu.
 
-# 8.13 Transfer Transactions (customer induced)
+# 3.13 Transfer Transactions (customer induced)
 A customer wants to transfer some amount from his account to another account. For this purpose one withdrawal and one deposit slip must be filled up. Check Dr. Balance before transaction.
 1. **Menu:** \`CXFER\` – Click **Go**
 2. **Function:** A-Add
@@ -1469,7 +1469,7 @@ A customer wants to transfer some amount from his account to another account. Fo
 9. Note **Tran ID** on both vouchers.
 *Super to verify the Transaction with the same menu \`CXFER\`. Function - Verify.*
 
-# 8.14 Rectification of wrong Transaction
+# 3.14 Rectification of wrong Transaction
 Amount X (e.g. Rs 50000) posted instead of Amount Y (e.g. Rs 5000) or posting done in wrong account number.
 **Withdrawal of the wrong deposit made:**
 1. **Menu:** \`CTM\` – Click **Go**
@@ -1483,7 +1483,7 @@ Amount X (e.g. Rs 50000) posted instead of Amount Y (e.g. Rs 5000) or posting do
 1. Normal Deposit procedure with correct amount or in the correct account number using CTM
 2. Note down new transaction id on the SB-103 made by the office itself.
 
-# 8.16 Branch office SB Deposit
+# 3.16 Branch office SB Deposit
 1. **Menu:** \`CXFER\` – Click **Go**.
 2. **Function:** A-Add (Function type: Transfer(default) come)
 3. **Transaction type/subtype:** Select **T/BI-Bank Induced**. [Important factor]
@@ -1497,7 +1497,7 @@ Amount X (e.g. Rs 50000) posted instead of Amount Y (e.g. Rs 5000) or posting do
 11. Note **Transaction ID** on voucher.
 *After verification by super with same menu \`CXFER\`, transaction will appear in LOT and Consolidation.*
 
-# 8.17 Branch office SB Withdrawal
+# 3.17 Branch office SB Withdrawal
 *[Use HACLI to see the balance before withdrawal at AO]*
 1. **Menu:** \`CXFER\` – Click **Go**.
 2. **Function:** A-Add (Function type: Transfer(default) come)
@@ -1515,11 +1515,11 @@ Amount X (e.g. Rs 50000) posted instead of Amount Y (e.g. Rs 5000) or posting do
   },
   {
     id: 'sb_cheque_8.8',
-    sectionNumber: '8.8, 8.9, 8.10, 8.23-8.26',
+    sectionNumber: '3.8, 8.9, 8.10, 8.23-8.26',
     title: 'Cheque Book & Stop Payment',
     categoryId: 'sb_cheque',
     content: `
-# 8.8 Issue of Cheque Book
+# 3.8 Issue of Cheque Book
 1. **Menu:** \`HICHB\` – Click **Go**
 2. **Function:** Issue
 3. **Acknowledgement** radio button – Select "Yes" option.
@@ -1536,19 +1536,19 @@ Amount X (e.g. Rs 50000) posted instead of Amount Y (e.g. Rs 5000) or posting do
 4. Click **Go**. New window opens.
 5. In the next screen click **Submit**. A message will come "verified successfully"
 
-# 8.9 Cheque Book Inquiry
+# 3.9 Cheque Book Inquiry
 1. **Menu:** \`HCHBI\` – Click **Go**
 2. **A/c ID:** Enter SB A/c no
 3. Click **Go**
 4. Click **View details**.
 
-# 8.10 To find an Account number by a Cheque Number
+# 3.10 To find an Account number by a Cheque Number
 1. **Menu** \`HINQACHQ\` – Click **Go**
 2. Enter **Cheque No.**
 3. Click **Go**
 In the next screen A/c ID will show along with A/c Holders name.
 
-# 8.23 Stop payment
+# 3.23 Stop payment
 Stop payment of a cheque referred to when the cheque is lost or damaged. This is a precautionary step to stop cheque being realized by the person not entitled to it.
 *Stopping the payment of the cheque is requested by the customer.*
 1. **Menu:** \`HSPP\` – Click **Go**.
@@ -1575,7 +1575,7 @@ If number of cheque leaf is only one In the next Screen:
 *Note 1: You can see the stop payment information by invoking the menu HCHBI, Enter A/c ID and click Go. Now view details (refined search available). Select Back button to return.*
 *Note 2: Stop pay report can be seen from HPR menu.*
 
-# 8.24 Revoking Stop payment
+# 3.24 Revoking Stop payment
 1. **Menu:** \`HSPP\` – Click **Go**.
 2. **Function** – Revoke Stop Pay
 3. **A/c ID:** Enter SB A/C no
@@ -1586,7 +1586,7 @@ If number of cheque leaf is only one In the next Screen:
 8. Note Down the **Ref No**.
 *Verify the Revoking of Stop payment using menu HSPPAU.*
 
-# 8.25 Cheque Book Destroy Procedure
+# 3.25 Cheque Book Destroy Procedure
 Before closing SB cheque account cheque book or remaining cheque leaves must be destroyed first.
 1. **Menu:** \`HCHBM\`- Click **Go**
 2. **Function:** D-Destroy
@@ -1597,24 +1597,24 @@ Before closing SB cheque account cheque book or remaining cheque leaves must be 
 7. **Submit**
 8. **Verification** with the same menu HCHBM. Function- Verify
 
-# 8.26 Other functions of the Menu HCHBM
+# 3.26 Other functions of the Menu HCHBM
 * To inquire about cheque book.
 * If the cheque is not recognized in Finacle. The main cause may be it has not been Acknowledged. Use **Acknowledge function** and verify it with supervisor.
 `
   },
   {
     id: 'sb_passbook_inquiry',
-    sectionNumber: '8.12, 8.15, 8.20 - 8.22',
+    sectionNumber: '3.12, 8.15, 8.20 - 8.22',
     title: 'Passbook & Inquiries',
     categoryId: 'sb_passbook_inquiry',
     content: `
-# 8.12 Transaction Ledger Inquiry
+# 3.12 Transaction Ledger Inquiry
 1. **Menu:** \`HACLI\`, Click **Go**
 2. **A/c ID:** Enter Account ID
 3. Change the **From date** if transaction from previous date required.
 4. Click **Go**
 
-# 8.15 Print Passbook
+# 3.15 Print Passbook
 
 **8.15.1 New Passbook Print**
 1. **Menu:** \`HPBP\` – Click **Go**
@@ -1657,19 +1657,19 @@ At the time of Duplicate passbook issue, if the customer wants to print the tran
 4. Click **Submit**. A message will come "A/c ID .............verified successfully".
 After the reset, print the Passbook using the menu HPBP. Procedure same as described in Section 8.15.3 in case of duplicate passbook. If it is not the case of duplicate PB, then follow procedure of normal PB print described in section 8.15.1.
 
-# 8.20 Account Balance Check
+# 3.20 Account Balance Check
 Balance of any account (Effective Available Balance), Float Balance (When cheques are entered) Shadow balance (Funds in clearing) of cheque, Lien Amount, Scheme code of A/c etc. can be checked using this procedure.
 1. **Menu:** \`HACCBAL\`- Click **Go**.
 2. Enter **A/c ID**
 3. Click **Go**
 
-# 8.21 Account Details Check
+# 3.21 Account Details Check
 CIF ID of the account, Customers name, Scheme code, A/c Status, A/c Open date, Interest rate, Mode of operation, Freeze code etc. can be seen.
 1. **Menu:** \`HACCDET\`- Click **Go**.
 2. Enter **A/c ID**
 3. Click **Go**
 
-# 8.22 Pre Migration Transaction Check (Transactions of Sanchaya Post)
+# 3.22 Pre Migration Transaction Check (Transactions of Sanchaya Post)
 1. **Menu:** \`TIPM\`- Click **Go**.
 2. Enter **Account Number**
 3. **Start Date:** Enter the date from which transaction details required
@@ -1678,11 +1678,11 @@ CIF ID of the account, Customers name, Scheme code, A/c Status, A/c Open date, I
   },
   {
     id: 'sb_closure',
-    sectionNumber: '8.7, 8.18, 8.19',
+    sectionNumber: '3.7, 8.18, 8.19',
     title: 'Closure & Scheme Change',
     categoryId: 'sb_closure_transfer',
     content: `
-# 8.7 To change Scheme of SB A/c – [To be done by HO only - SB order 5/2016]
+# 3.7 To change Scheme of SB A/c – [To be done by HO only - SB order 5/2016]
 * Scheme of SB account can only be changed.
 * Transfer of SB accounts is possible only between schemes of the same product group. When Target scheme code belongs to a different product group compared to the Source scheme code, then error "Scheme Mismatch-Account can’t be transferred" is faced.
 The valid transfer scenarios are-
@@ -1699,7 +1699,7 @@ The valid transfer scenarios are-
 7. Super to **Verify the Instruction no**
 8. After verification use Menu \`HPR\` to print the report
 
-# 8.18 SB Account closer (HO or SO Account)
+# 3.18 SB Account closer (HO or SO Account)
 * No Trial Closer is possible in SB Account.
 * Before closing SB account the following should be checked-
 1. **There is no Float Balance, Unclear balance etc.** – Check using the Menu \`HACCBAL\`/\`HACLI\`. If exists, first clear the cheque and these balances are zero, then the SB a/c can be closed.
@@ -1735,7 +1735,7 @@ Verify the Account closer of SB using Same Menu \`HCAAC\`. Function - Verify
 2. The Counter PA has to use \`HTM\` menu to **post (Function – Modify) the transaction** and **Super has to verify** this transaction using \`HTM\` menu again, so that the balance of the account becomes Zero. If the transaction ID is not noted, the same can be found out by listing all transactions of the account using \`HFTI\` and checking the status of the transactions.
 3. Once the transactions are posted and verified and account balance has become zero, the Super can proceed with verification of SB closure.
 
-# 8.19 Branch Office (BO) SB Account closer
+# 3.19 Branch Office (BO) SB Account closer
 When SB7A along with Passbook is received from BO, do the following-
 **Step-1**
 1. **Menu:** \`HACACCR\`
@@ -1774,11 +1774,11 @@ Note Tran ID on SB7A
   // MIS SECTIONS
   {
     id: 'mis_general_10_2',
-    sectionNumber: '10.2, 10.5, 10.4',
+    sectionNumber: '5.2, 5.5, 5.4',
     title: 'MIS Account Details & Opening',
     categoryId: 'mis_general',
     content: `
-# 10.2 About Monthly Income Scheme Account (MIS)
+# 5.2 About Monthly Income Scheme Account (MIS)
 * All deposits in multiples of INR 1500/-
 * Maximum investment limit is INR 4.5 lakhs in single account and INR 9 lakhs in joint account.
 * Account can be opened by cash/cheque/transfer from SB Account.
@@ -1788,7 +1788,7 @@ Note Tran ID on SB7A
 * Maturity amount may be transferred to SB account.
 * MIS A/c can be prematurely en-cashed after 1 year but before 3 years at the discount of 2% of the deposit and after 3 years at the discount of 1% of the deposit.
 
-# 10.4 General Issues regarding TD/MIS/SCSS Account
+# 5.4 General Issues regarding TD/MIS/SCSS Account
 * TD And MIS Account Operation Uses Same Menu.
 * SCSS Account opening, verification and modification use different menu.
 * Interest payment procedure and closing procedure of TD/MIS/SCSS are same and uses same menu.
@@ -1797,7 +1797,7 @@ Note Tran ID on SB7A
 * If Account to be opened by Cheque, Office account SOLID0382 has to be checked using HACLINQ. Enter the cheque encashment date in the Value date field.
 * The CIF of MIS/TD/SCSS A/c and CIF of Interest credit account (SB A/c) must be same.
 
-# 10.5 Monthly Income Scheme (MIS) Account opening
+# 5.5 Monthly Income Scheme (MIS) Account opening
 1. **Menu:** \`CMISAOP\` – Click Go
 2. Enter the **CIF ID**
 3. Select Product Group **MIS**
@@ -1815,18 +1815,18 @@ Note Tran ID on SB7A
   },
   {
     id: 'mis_closure_10_20',
-    sectionNumber: '10.20, 10.21',
+    sectionNumber: '5.20, 5.21',
     title: 'MIS Account Closure',
     categoryId: 'mis_closure',
     content: `
-# 10.20 About Closer of TD/MIS/SCSS Account
+# 5.20 About Closer of TD/MIS/SCSS Account
 * Two types of closer – A) L-Trial Close & B) Z-Close.
 * L-Trial Close is mandatory in cases of: Branch Office account close, Premature closer, Post Maturity Interest (PMI) generated, and when exact figure of closing amount to cheque drawing office is required.
 * Ensure all due interest is paid before the closer.
 * In case of MIS closer, Principal amount, Bonus amount (if any), PMI if any, PMI on Bonus (if any) will be shown on closer.
 * In case of Joint MIS Account where one holder dies and investment is more than single holder limit, withdraw excess amount. Death of 1st holder: Death mark in CIF after withdrawal, then use CIF merger. Death of 2nd/3rd holder: half withdrawal done first, then modification menu of MIS used to delete holder.
 
-# 10.21 Closer of TD/MIS/SCSS A/c on Maturity/Premature/Death
+# 5.21 Closer of TD/MIS/SCSS A/c on Maturity/Premature/Death
 **Step 1:** Use menu \`HTDTRAN\` to see interest is generated for current month and credited to Sundry or SB account.
 **Step 2:** Ensure interest has been paid. Check via \`HIOT\` (for pre-migration) or \`HTM\`. If not paid, pay it using \`HTM\` before closure.
 **Step 3:** Use menu \`HCAACTD\` for Trial Close (L) to check amounts or Z-Close to finalize.
@@ -1843,29 +1843,29 @@ Note Tran ID on SB7A
   },
   {
     id: 'mis_td_scss_common',
-    sectionNumber: '10.7, 10.8, 10.9, 10.10, 10.11, 10.15, 10.17',
+    sectionNumber: '5.7, 5.8, 5.9, 5.10, 5.11, 5.15, 5.17',
     title: 'Common Procedures (MIS/TD/SCSS)',
     categoryId: 'mis_td_scss',
     content: `
-# 10.7 & 10.8 Setup and Verification
+# Setup and Verification
 * **CMISAOPM**: Modification Before Verification for TD/MIS.
 * **CMISAOPV**: Verification of new MIS or TD Account by Super.
 
-# 10.9 & 10.10 Modification of Existing TD/MIS Account
+# Modification of Existing TD/MIS Account
 * Used for Nomination addition/modification, converting Single to Joint / Joint to Single, and setting auto credit to SB A/c.
 * **Menu:** \`CMISAM\` -> Function: **M-Modify** -> Enter A/c ID -> Visit Flow Tab -> Submit.
 * Verification by Super uses **Menu:** \`CMISAM\` -> Function: **V-Verify**.
 
-# 10.11 To update Standing Instructions from MIS/TD to SB A/c
+# To update Standing Instructions from MIS/TD to SB A/c
 1. **Menu:** \`CMISAM\` -> Function: M-Modify
 2. Enter A/c ID. Enter Interest Credit Account (SB account number).
 3. Visit Flow Tab and Submit. Must be verified immediately to reflect in next interest cycle.
 
-# 10.15 View TD/MIS/SCSS Interest
+# View TD/MIS/SCSS Interest
 1. **Menu:** \`HTDTRAN\` -> Enter A/C ID -> Click Go.
 2. Click on Date to see details of transaction and where interest has been posted.
 
-# 10.17 TD/MIS/SCSS interest payment
+# TD/MIS/SCSS interest payment
 1. Interest flows to Sundry accounts: MIS (\`SOLID0337\`), TD (\`SOLID0335\`), SCSS (\`SOLID0338\`).
 2. **Menu:** \`HTM\` -> Function: A-Add.
 3. **Transaction type:** Cash/Normal Payment (for cash) or Customer Induced (for transfer to SB A/c or \`SOL0340\` for cheque).
@@ -1877,29 +1877,29 @@ Note Tran ID on SB7A
   },
   {
     id: 'mis_td_scss_common_td',
-    sectionNumber: '10.7, 10.8, 10.9, 10.10, 10.11, 10.15, 10.17',
+    sectionNumber: '5.7, 5.8, 5.9, 5.10, 5.11, 5.15, 5.17',
     title: 'Common Procedures (MIS/TD/SCSS)',
     categoryId: 'td_mis_scss',
     content: `
-# 10.7 & 10.8 Setup and Verification
+# Setup and Verification
 * **CMISAOPM**: Modification Before Verification for TD/MIS.
 * **CMISAOPV**: Verification of new MIS or TD Account by Super.
 
-# 10.9 & 10.10 Modification of Existing TD/MIS Account
+# Modification of Existing TD/MIS Account
 * Used for Nomination addition/modification, converting Single to Joint / Joint to Single, and setting auto credit to SB A/c.
 * **Menu:** \`CMISAM\` -> Function: **M-Modify** -> Enter A/c ID -> Visit Flow Tab -> Submit.
 * Verification by Super uses **Menu:** \`CMISAM\` -> Function: **V-Verify**.
 
-# 10.11 To update Standing Instructions from MIS/TD to SB A/c
+# To update Standing Instructions from MIS/TD to SB A/c
 1. **Menu:** \`CMISAM\` -> Function: M-Modify
 2. Enter A/c ID. Enter Interest Credit Account (SB account number).
 3. Visit Flow Tab and Submit. Must be verified immediately to reflect in next interest cycle.
 
-# 10.15 View TD/MIS/SCSS Interest
+# View TD/MIS/SCSS Interest
 1. **Menu:** \`HTDTRAN\` -> Enter A/C ID -> Click Go.
 2. Click on Date to see details of transaction and where interest has been posted.
 
-# 10.17 TD/MIS/SCSS interest payment
+# TD/MIS/SCSS interest payment
 1. Interest flows to Sundry accounts: MIS (\`SOLID0337\`), TD (\`SOLID0335\`), SCSS (\`SOLID0338\`).
 2. **Menu:** \`HTM\` -> Function: A-Add.
 3. **Transaction type:** Cash/Normal Payment (for cash) or Customer Induced (for transfer to SB A/c or \`SOL0340\` for cheque).
@@ -1911,29 +1911,29 @@ Note Tran ID on SB7A
   },
   {
     id: 'mis_td_scss_common_scss',
-    sectionNumber: '10.7, 10.8, 10.9, 10.10, 10.11, 10.15, 10.17',
+    sectionNumber: '5.7, 5.8, 5.9, 5.10, 5.11, 5.15, 5.17',
     title: 'Common Procedures (MIS/TD/SCSS)',
     categoryId: 'scss_td_mis',
     content: `
-# 10.7 & 10.8 Setup and Verification
+# Setup and Verification
 * **CMISAOPM**: Modification Before Verification for TD/MIS.
 * **CMISAOPV**: Verification of new MIS or TD Account by Super.
 
-# 10.9 & 10.10 Modification of Existing TD/MIS Account
+# Modification of Existing TD/MIS Account
 * Used for Nomination addition/modification, converting Single to Joint / Joint to Single, and setting auto credit to SB A/c.
 * **Menu:** \`CMISAM\` -> Function: **M-Modify** -> Enter A/c ID -> Visit Flow Tab -> Submit.
 * Verification by Super uses **Menu:** \`CMISAM\` -> Function: **V-Verify**.
 
-# 10.11 To update Standing Instructions from MIS/TD to SB A/c
+# To update Standing Instructions from MIS/TD to SB A/c
 1. **Menu:** \`CMISAM\` -> Function: M-Modify
 2. Enter A/c ID. Enter Interest Credit Account (SB account number).
 3. Visit Flow Tab and Submit. Must be verified immediately to reflect in next interest cycle.
 
-# 10.15 View TD/MIS/SCSS Interest
+# View TD/MIS/SCSS Interest
 1. **Menu:** \`HTDTRAN\` -> Enter A/C ID -> Click Go.
 2. Click on Date to see details of transaction and where interest has been posted.
 
-# 10.17 TD/MIS/SCSS interest payment
+# TD/MIS/SCSS interest payment
 1. Interest flows to Sundry accounts: MIS (\`SOLID0337\`), TD (\`SOLID0335\`), SCSS (\`SOLID0338\`).
 2. **Menu:** \`HTM\` -> Function: A-Add.
 3. **Transaction type:** Cash/Normal Payment (for cash) or Customer Induced (for transfer to SB A/c or \`SOL0340\` for cheque).
@@ -1969,7 +1969,7 @@ Note Tran ID on SB7A
 * **Principal Outflow (PO):** payment of the deposit amount (principal). Normally used when interest is paid periodically, so on closure, customer only receives the principal.
 * **Interest Outflow (IO):** paying periodical interest either cash or to savings account instead of crediting it to the Time deposit account.
 
-# 10.1 About Time Deposit Account (TD)
+# 4.1 About Time Deposit Account (TD)
 * Normal tenures: 1 year, 2 years, 3 years and 5 years only.
 * Deposit amount minimum Rs.200 and no maximum limit. All deposits in multiple of Rs.200.
 * Interest is compounded quarterly.
@@ -2141,11 +2141,11 @@ Similar to normal TD Opening, with these specific changes:
   // SCSS EXTRA SECTIONS
   {
     id: 'scss_general_10_12',
-    sectionNumber: '10.12, 10.13, 10.25',
+    sectionNumber: '6.12, 6.13, 6.25',
     title: 'SCSS Account & TDS',
     categoryId: 'scss_td_mis',
     content: `
-# 10.12 About Senior Citizen Savings Scheme (SCSS)
+# 6.12 About Senior Citizen Savings Scheme (SCSS)
 * Age 60+ (or 55+ for VRS). Minimum Rs. 1000/-, Maximum Rs. 15 lakhs.
 * Cash allowed below INR 1 lakh. Above 1 lakh requires cheque.
 * No withdrawal permitted before 5 years. Lock in period is 1 year.
@@ -2153,13 +2153,13 @@ Similar to normal TD Opening, with these specific changes:
 * Quarterly interest (1st working day of April, July, Oct, Jan).
 * PAN card is mandatory.
 
-# 10.25 Submission of 15G/15H in SCSS Accounts
+# 6.25 Submission of 15G/15H in SCSS Accounts
 1. \`CMRC\` -> Inquire -> Check Tax Deduction at Source table code. Ensure it is NOTAX.
 2. **Menu:** \`CSCAM\` -> Function-Modify. Enter SCSS A/c ID.
 3. Delete "NONE" in Tax Form. Select \`15H/15G\`.
 4. In Tax Category field, Select - \`No tax\` option. Submit and Verify.
 
-# 10.26 Refund of TDS if wrongly deducted
+# 6.26 Refund of TDS if wrongly deducted
 1. Write in Error Book.
 2. **Menu:** \`HRFTDS\` -> Enter SCSS account ID -> Trantype: Transfer.
 3. Enter Refund A/c ID (Customer's SB a/c or \`0340\` for cash). Submit.
@@ -2168,11 +2168,11 @@ Similar to normal TD Opening, with these specific changes:
   },
   {
     id: 'ssa_menus_opening',
-    sectionNumber: 'Menus & Opening',
+    sectionNumber: '7.1',
     title: 'SSA Menus & Account Opening',
     categoryId: 'ssa_general',
     content: `
-# SSA Account Related Menus in Finacle
+# 7.1 SSA Account Related Menus in Finacle
 1. Account opening = **CPPFAO**
 2. Verify by supervisor = **CPPFAV**
 3. Modify SSA Account before verification = **CPPFAOM**
@@ -2181,7 +2181,7 @@ Similar to normal TD Opening, with these specific changes:
 6. Reversal of SSA Deposit = **CPWTM**
 7. Closure of SSA Account and verify = **HCAAC**
 
-# How to open a BO SSA Account
+# 7.2 How to open a BO SSA Account
 1. **Menu:** \`CPPFAO\` – Click Go
 2. Enter the **CIF ID**. All the data of the customers as per the CIF id will get populated.
 3. **Scheme code:** \`SSA\`
@@ -2202,7 +2202,7 @@ Similar to normal TD Opening, with these specific changes:
 14. Click **OK**.
 *SSA A/c ID will be generated, Note down the Numbers on AOF.*
 
-# Verify By Supervisor
+# 7.3 Verify By Supervisor
 1. **Menu:** \`CPPFAV\` – Go
 2. **Function:** Verify
 3. **Account ID:** Enter SSA A/C No
@@ -2212,11 +2212,11 @@ Similar to normal TD Opening, with these specific changes:
   },
   {
     id: 'ssa_deposit_funding',
-    sectionNumber: 'Deposit & Funding',
+    sectionNumber: '7.4',
     title: 'Funding, Deposits & Withdrawal',
     categoryId: 'ssa_deposit_withdrawal',
     content: `
-# Funding SSA Account
+# 7.4 Funding SSA Account
 Enter the menu **CPDTM**, select **Add** » **Bank Transfer** » **Normal Contribution**, click on **Go**. You should see the following window.
 
 Enter the following details:
@@ -2228,7 +2228,7 @@ Enter the following details:
 * Click on **Submit** icon to get the Account ID result at the bottom. Select the account id. The pop-up will disappear.
 * Click on **Submit**.
 
-# SSA Deposit (CPDTM)
+# 7.5 SSA Deposit (CPDTM)
 1. **Menu:** \`CPDTM\` -> **GO**
 2. **Function Code:** Add
 3. **Tran Type/Sub Type:** C/NR-Cash Normal Receipt
@@ -2238,7 +2238,7 @@ Enter the following details:
 7. **Submit**
 8. Note the Transaction ID and verify from supervisor in same menu (\`CPDTM\`).
 
-# SSA Withdrawal (CPWTM) - Reversal
+# 7.6 SSA Withdrawal (CPWTM) - Reversal
 1. **Menu:** \`CPWTM\` -> **GO**
 2. **Function Code:** Add
 3. **Tran Type/Sub Type:** C/NP-Cash Normal Payment
@@ -2252,11 +2252,11 @@ Enter the following details:
   },
   {
     id: 'ssa_claim',
-    sectionNumber: 'Claim Closure',
+    sectionNumber: '7.7',
     title: 'SSA Claim Procedure',
     categoryId: 'ssa_claim',
     content: `
-# SSA Claim Procedure in Finacle
+# 7.7 SSA Claim Procedure in Finacle
 
 **Short Note:**
 * Mark & verify the depositor CIF as Deceased.
@@ -2286,11 +2286,11 @@ Enter the following details:
   },
   {
     id: 'inv_movement',
-    sectionNumber: 'Movement',
+    sectionNumber: '10.1',
     title: 'Inventory Movement (HIMC)',
     categoryId: 'inv_movement',
     content: `
-# About Inventory Movement
+# 10.1 About Inventory Movement
 Cheque Book is valuable items. In Finacle this is called Inventory item.
 - \`ZZ-EXT\`: External Location Class is ZZ and Location Code is EXT.
 - \`DL-DL\`: Main Stock Location Class and Location Code both are called DL (Double Lock).
@@ -2302,7 +2302,7 @@ Movement of inventory happens from PSD to Head Post Office, then sub offices.
 - Reversal: **EM-Employee ID** to **DL-DL** -> **DL-DL** to **ZZ-EXT** or **DS**
 - In offices with more than one Supervisor, one enters and another authorizes. In Single/Double/Triple handed office with only one supervisor, entered and authorized by the same Supervisor.
 
-# Movement from External to Main Stock (Double Lock)
+# 10.2 Movement from External to Main Stock (Double Lock)
 1. **Menu:** \`HIMC\` -> Click Go
 2. **Function:** Add
 3. Click Go. A new Window will come.
@@ -2316,7 +2316,7 @@ Movement of inventory happens from PSD to Head Post Office, then sub offices.
 11. Click **Submit** button. *Do not click on Add Button if there is no more item to be entered. If Add button is pressed accidentally, one blank record will be added, and it will not allow to submit the inventory with blank record. There is no way to delete any entered record. In that case whole thing have to be reentered again. Click Add Button, if more entry has to be made. Here modification of any record is possible.*
 12. Transaction ID will be generated. Note down in a blank sheet of paper.
 
-# Verification by Supervisor
+# 10.3 Verification by Supervisor
 **At Single Handed Office [Where Supervisor himself is Authoriser]:**
 1. **Menu:** \`HIMC\` -> Go
 2. **Function:** Verify
@@ -2333,12 +2333,12 @@ Movement of inventory happens from PSD to Head Post Office, then sub offices.
 6. Click **Authorize** button.
 7. Enter password of the custodian, Click Login, Click Submit.
 
-# If the Transaction ID could not be noted for any reason
+# 10.4 If the Transaction ID could not be noted for any reason
 1. **Menu:** \`HIMI\`
 2. Select Inventory transaction status as "Entered but not Authorized"
 3. Click Go button. The Inventory ID will be shown.
 
-# Movement From Main stock (Double Lock) To Counter
+# 10.5 Movement From Main stock (Double Lock) To Counter
 1. **Menu:** \`HIMC\` -> Go
 2. **Function:** Add -> Go
 3. **From Location Class:** \`DL\` | **From Location Code:** \`DL\`
@@ -2352,7 +2352,7 @@ Movement of inventory happens from PSD to Head Post Office, then sub offices.
 9. Click **Validate** button- Number of items required to be transfer to counter will be shown automatically in the quantity box.
 10. Click **Submit** button. (Remember the Add button warning). Note down Transaction ID.
 
-# Return of Inventory to Double Lock (Main Stock) from Employee (Counter)
+# 10.6 Return of Inventory to Double Lock (Main Stock) from Employee (Counter)
 If for any reason inventory given to a counter PA has to be returned to the main stock.
 1. **Menu:** \`HIMC\` -> Go
 2. **Function:** Add -> Go
@@ -2369,11 +2369,11 @@ If for any reason inventory given to a counter PA has to be returned to the main
   },
   {
     id: 'inv_split_merge',
-    sectionNumber: 'Split & Merge',
+    sectionNumber: '10.7',
     title: 'Splitting and Merging Inventories',
     categoryId: 'inv_cheque_split_merge',
     content: `
-# Splitting of Cheque Book
+# 10.7 Splitting of Cheque Book
 Cheque Books given to counter must be split as it has been taken in a lot. Splitting can be done by Supervisor. Here no need to verify the splitting.
 1. **Menu:** \`HISIA\` -> Click Go
 2. **Function:** Split
@@ -2386,7 +2386,7 @@ Cheque Books given to counter must be split as it has been taken in a lot. Split
 9. **Items per unit:** Enter number of leaves in a cheque book.
 10. **Submit**. A message will come "Inventory split is successful".
 
-# Merging of Cheque Book
+# 10.8 Merging of Cheque Book
 Merging of inventory refers to consolidation of inventory held in various small lots into a bigger lot. This option is used to transfer the unutilised inventory held by an employee to double lock custody. Usually when one user is transferred from one office to another, the splitted cheque books given to his/her employee location, needs to be merged first to return it back to Double Lock (Main Stock).
 1. **Menu:** \`HIMIA\` -> Click Go
 2. **Function:** M-MERGE
@@ -2401,13 +2401,13 @@ Merging of inventory refers to consolidation of inventory held in various small 
   },
   {
     id: 'inv_ho_to_so',
-    sectionNumber: 'HO to SO',
+    sectionNumber: '10.9',
     title: 'Inventory Movement from HO to SO',
     categoryId: 'inv_ho_to_so',
     content: `
 It is common practice of sending stock to SOs from HO. We can directly transfer stock from HO to SO in Finacle.
 
-# Step 1: Move Stock to ZZ-EXT at HO
+# 10.9 Step 1: Move Stock to ZZ-EXT at HO
 1. At HO, identify the stock to be sent to SO.
 2. **Menu:** \`HIMC\` -> **Function:** Add -> Go
 3. **From Location Class:** \`DL\` | **From Location Code:** \`DL\`
@@ -2416,12 +2416,12 @@ It is common practice of sending stock to SOs from HO. We can directly transfer 
 6. Click **Submit** and note the transaction ID.
 7. Verify the Inventory using \`HIMC\` -> Verify (same verification process).
 
-# Step 2: Change Context SOL ID
+# 10.10 Step 2: Change Context SOL ID
 1. **Menu:** \`HCCS\` -> Go
 2. **Enter New Context Sol ID:** The SOL ID to which stock is being given (the SO).
 3. Click **Submit**.
 
-# Step 3: Receive Stock at SO (Done by HO supervisor)
+# 10.11 Step 3: Receive Stock at SO (Done by HO supervisor)
 After Changing the Context Sol id the supervisor will again use HIMC to transfer certificates from ZZ-EXT to DL-DL (This DL-DL belongs to the SO to which stock is being sent).
 1. **Menu:** \`HIMC\` -> **Function:** Add -> Go
 2. **From Location Class:** \`ZZ\` | **From Location Code:** \`EXT\`
@@ -2429,7 +2429,7 @@ After Changing the Context Sol id the supervisor will again use HIMC to transfer
 4. Click **Accept**, search Inventory class/type, select the inventory you are receiving, enter start no. and quantity.
 5. Click **Submit** and note transaction ID. Send physically to SO along with this ID.
 
-# Step 4: Verification at SO
+# 10.12 Step 4: Verification at SO
 At SO after receiving the physical stock, verify the transaction id using HIMC.
 1. **Menu:** \`HIMC\` -> **Function:** Verify -> Go
 2. Enter Transaction ID -> Authorize details -> Authorize (using authorizer password).
@@ -2438,11 +2438,11 @@ At SO after receiving the physical stock, verify the transaction id using HIMC.
   },
   {
     id: 'inv_inquiry',
-    sectionNumber: 'Inquiry',
+    sectionNumber: '10.13',
     title: 'Inventory Inquiry (HIIA / HISI)',
     categoryId: 'inv_inquiry',
     content: `
-# Inquiry of Inventory
+# 10.13 Inquiry of Inventory
 Inquiry of inventory can be done for any location. From this inquiry Double Lock stock and counter stock of every item or a particular item can be seen. Details of the stock is also available.
 
 ## To see Particular counter and All or Particular inventory item
@@ -2460,7 +2460,7 @@ Inquiry of inventory can be done for any location. From this inquiry Double Lock
 5. Click **Go**
 6. Click **View details** button to see the details.
 
-# Inventory Inquiry (HISI)
+# 10.14 Inventory Inquiry (HISI)
 1. **Menu:** \`HISI\`
 2. Select the function **Inquire**
 3. Click **Go**
@@ -2469,11 +2469,11 @@ Inquiry of inventory can be done for any location. From this inquiry Double Lock
   },
   {
     id: 'inv_cheque_issue',
-    sectionNumber: 'Cheque Book',
+    sectionNumber: '10.15',
     title: 'Issue & Inquiry of Cheque Book',
     categoryId: 'inv_cheque_mgt',
     content: `
-# Issue of Cheque Book (HICHB)
+# 10.15 Issue of Cheque Book (HICHB)
 1. **Menu:** \`HICHB\` – Click Go
 2. **Function:** Issue
 3. **Acknowledgement radio button:** Select "Yes" option.
@@ -2483,20 +2483,20 @@ Inquiry of inventory can be done for any location. From this inquiry Double Lock
 7. A list of cheque book will show. Select the check box at left to select the Cheque book to be issued. The Cheque book should be issued serially.
 8. Click **Submit**. A message will come "Cheque book issued successfully to A/c ID".
 
-# Issue of Cheque Book Verification (HICHB)
+# 10.16 Issue of Cheque Book Verification (HICHB)
 1. **Menu:** \`HICHB\` and Click Go button
 2. **Function:** Select Verify
 3. **A/c ID:** Enter the SB Account no.
 4. Click **Go**. New window opens.
 5. In the next screen click **Submit**. A message will come "verified successfully".
 
-# Cheque Book Inquiry (HCHBI)
+# 10.17 Cheque Book Inquiry (HCHBI)
 1. **Menu:** \`HCHBI\` – Click Go
 2. **A/C ID:** Enter SB A/c no 
 3. Click **Go**
 4. Click **View details**.
 
-# To find an Account number by a Cheque Number (HINQACHQ)
+# 10.18 To find an Account number by a Cheque Number (HINQACHQ)
 1. **Menu:** \`HINQACHQ\` – Click Go
 2. Enter **Cheque No.** 
 3. Click **Go**
@@ -2505,11 +2505,11 @@ Inquiry of inventory can be done for any location. From this inquiry Double Lock
   },
   {
     id: 'inv_cheque_stop_destroy',
-    sectionNumber: 'Stop & Destroy',
+    sectionNumber: '10.19',
     title: 'Stop Payment & Destroy Cheque',
     categoryId: 'inv_cheque_mgt',
     content: `
-# STOP PAYMENT (HSPP)
+# 10.19 STOP PAYMENT (HSPP)
 Stop payment of a cheque referred to when the cheque is lost or damaged. This is a precautionary step to stop cheque being realized by the person not entitled to it.
 1. **Menu:** \`HSPP\` – Click Go.
 2. **Function:** Stop Pay
@@ -2535,7 +2535,7 @@ Stop payment of a cheque referred to when the cheque is lost or damaged. This is
 *Note 1: You can see the stop payment information by invoking the menu \`HCHBI\`, Enter A/c ID and click Go. Now view details (refined search available). Select Back button to return.*
 *Note 2: Stop pay report can be seen from \`HPR\` menu.*
 
-# Revoking Stop payment (HSPP)
+# 10.20 Revoking Stop payment (HSPP)
 1. **Menu:** \`HSPP\` – Click Go.
 2. **Function:** Revoke Stop Pay
 3. **A/c ID:** Enter SB A/C no
@@ -2546,7 +2546,7 @@ Stop payment of a cheque referred to when the cheque is lost or damaged. This is
 8. Note Down the Ref No.
 Verify the Revoking of Stop payment using menu \`HSPPAU\`.
 
-# CHEQUE BOOK DESTROY PROCEDURE (HCHBM)
+# 10.21 CHEQUE BOOK DESTROY PROCEDURE (HCHBM)
 Before closing SB cheque account cheque book or remaining cheque leaves must be destroyed first.
 1. **Menu:** \`HCHBM\`- Click Go
 2. **Function:** D-Destroy
@@ -2563,11 +2563,11 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
   },
   {
     id: 'inv_atm_mgt',
-    sectionNumber: 'ATM Card',
+    sectionNumber: '10.22',
     title: 'ATM Card Issue & Replacement',
     categoryId: 'inv_atm_mgt',
     content: `
-# ATM CARD ISSUE (CCMM)
+# 10.22 ATM CARD ISSUE (CCMM)
 1. **Menu:** \`CCMM\` – Click Go
 2. **Function:** Add
 3. **CIF ID:** Enter CIF ID -> Click Go. A new Window will come.
@@ -2579,7 +2579,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
 9. **Submit**
 10. Verify using same menu by supervisor (\`CCMM\`)
 
-# ATM CARD REPLACEMENT (CCMM)
+# 10.23 ATM CARD REPLACEMENT (CCMM)
 1. **Menu:** \`CCMM\` – Click Go
 2. **Function:** Modify
 3. **CIF ID:** Enter CIF ID
@@ -2600,7 +2600,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
     title: 'Account Opening & Deposit',
     categoryId: 'ppf_general',
     content: `
-# 5.1 PPF Deposit (CPDTM)
+# 8.1 PPF Deposit (CPDTM)
 1. Invoke \`CPDTM\` menu
 2. **Function:** Add
 3. **Transaction type/subtype:** Cash normal receipt / Customer transfer for POSB cheques and Bank cheques.
@@ -2617,7 +2617,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
 1. For Deposit through POSB cheque, use customer induced option and Customer’s SB account ID as Debit A/C ID.
 2. For Deposit through Bank cheque, use customer induced option and \`SOLID+0017\` as Debit A/C ID. Change the value date as cheque clearance date.
 
-# 5.2 Account Opening (CPPFAO)
+# 8.2 Account Opening (CPPFAO)
 1. Invoke \`CPPFAO\` menu
 2. **Function:** Open
 3. Enter **CIF ID**
@@ -2637,7 +2637,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
 
 **Note 2:** We can choose Documents Received as NO as we are not sending any documents for scanning at CPC.
 
-# 5.11 Change of Nomination (CPPFAM)
+# 8.11 Change of Nomination (CPPFAM)
 **Case 1 – Giving nomination for first time**
 1. Invoke the menu \`CPPFAM\`
 2. **Function:** Modify
@@ -2662,7 +2662,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
 1. Follow the steps in Case 2 and delete the nomination first.
 2. Add a new nomination using steps in Case 1.
 
-# 5.4 Account Extension (HCEXTN)
+# 8.4 Account Extension (HCEXTN)
 1. Invoke \`HCEXTN\` menu
 2. **Function:** Extend
 3. Enter A/C Number
@@ -2676,7 +2676,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
     title: 'Loan Opening, Disbursement & Repayment',
     categoryId: 'ppf_loan',
     content: `
-# 5.5 Loan Account opening (CLPPFAO)
+# 8.5 Loan Account opening (CLPPFAO)
 1. Invoke \`CLPPFAO\` menu
 2. **Function:** Open
 3. Enter CIF ID & PPF A/C ID
@@ -2688,7 +2688,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
 9. Click on **SUBMIT(F10)**
 10. Verify the Transaction in supervisor login using \`CLPPFAOV\` menu.
 
-# 5.6 Loan Disbursement (CPWTM)
+# 8.6 Loan Disbursement (CPWTM)
 1. Invoke \`CPWTM\` menu
 2. **Function Code:** ADD
 3. **Transaction Type/Sub Type:** Cash Normal Payment/Customer Transfer
@@ -2702,7 +2702,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
 11. Click on **SUBMIT(F10)**
 12. Note down the Transaction ID and verify the same in supervisor login.
 
-# 5.7 Loan Repayment (CPDTM)
+# 8.7 Loan Repayment (CPDTM)
 1. Invoke \`CPDTM\` menu
 2. **Function:** ADD
 3. **Transaction Type/Sub Type:** Cash Normal Receipt/Customer Transfer
@@ -2714,7 +2714,7 @@ To inquire about cheque book: If the cheque is not recognized in Finacle. The ma
 9. Click on **SUBMIT (F10)**
 10. Note down the transaction ID and verify in supervisor login.
 
-# 5.8 Loan Final Repayment
+# 8.8 Loan Final Repayment
 **Step 1: Repayment Of Loan**
 Follow the same CPDTM steps as 5.7 (Cash Normal Receipt/Customer Transfer), Type: Loan Principle Repayment/Loan Interest Repayment. Submit and verify.
 
@@ -2728,7 +2728,7 @@ Follow the same CPDTM steps as 5.7 (Cash Normal Receipt/Customer Transfer), Type
 1. Then, \`HACINT\` is to be invoked by CEPT team (at present). On invoking this, the interest for loan account is calculated and posted in PPF loan account.
 2. The loan interest has to be paid through \`CPDTM\` menu again, if the PPF account is not a matured account.
 
-# 5.9 Loan Account Closure
+# 8.9 Loan Account Closure
 Loan A/C Closure includes the exact same 3 steps as Loan Final Repayment (CPDTM Repayment, CLPR Process, HACINT Interest by CEPT). Step 4 is paying the interest again via CPDTM if not matured.
 `
   },
@@ -2738,7 +2738,7 @@ Loan A/C Closure includes the exact same 3 steps as Loan Final Repayment (CPDTM 
     title: 'Partial Withdrawal, Closure & Reversal',
     categoryId: 'ppf_withdrawal_closure',
     content: `
-# 5.10 Partial Withdrawal (CPWTM)
+# 8.10 Partial Withdrawal (CPWTM)
 1. Invoke \`CPWTM\` menu
 2. **Function Code:** ADD
 3. **Transaction Type/Sub Type:** Cash Normal Payment/Customer Transfer
@@ -2753,7 +2753,7 @@ Loan A/C Closure includes the exact same 3 steps as Loan Final Repayment (CPDTM 
 12. Click on **SUBMIT(F10)**
 13. Note down the Transaction ID and verify the same in the same menu in supervisor login.
 
-# 5.3 Account Closure (HCAAC)
+# 8.3 Account Closure (HCAAC)
 1. Invoke \`HCAAC\` menu
 2. **Function:** Close
 3. Enter the A/C number
@@ -2765,7 +2765,7 @@ Loan A/C Closure includes the exact same 3 steps as Loan Final Repayment (CPDTM 
 9. Click on **SUBMIT(F10)**
 10. Verify the closure in supervisor login using the same menu
 
-# 5.12 Reversal (CPWTM)
+# 8.12 Reversal (CPWTM)
 In some cases, we may deposit the amount in wrong PPF A/C other than the intended one or we may deposit excess amount in any account. Do the reversal operation by following steps:
 1. Invoke \`CPWTM\` menu
 2. **Function Code:** ADD
@@ -2788,7 +2788,7 @@ In some cases, we may deposit the amount in wrong PPF A/C other than the intende
     title: 'Transfer In/Out From/To Bank',
     categoryId: 'ppf_transfer',
     content: `
-# 5.13 Transfer out to bank (HINTTM / HCAAC)
+# 8.13 Transfer out to bank (HINTTM / HCAAC)
 PPF Bank Transfer and verification should be Done in Supervisor Logins only:
 a) Invoke \`HINTTM\` menu from one supervisor login for zeroing of interest for the current financial year.
 b) In \`HINTTM\`, PPF account number to be entered; From date should be \`01-04-YYYY\` (Current Year); Interest table code should be \`Zero\`.
@@ -2797,7 +2797,7 @@ d) Closure has to be invoked using \`HCAAC\` menu from Supervisor login. Option 
 e) Closure reason should be selected as ‘Transfer to Bank’.
 f) Closure has to be verified by other Supervisor.
 
-# 5.14 Transfer in from bank (CPPFAO / CTUPLD / CTPROC)
+# 8.14 Transfer in from bank (CPPFAO / CTUPLD / CTPROC)
 a) Create CIF ID if already not available.
 b) Use \`CPPFAO\` menu in PA login to open a new PPF account. Select the CIF ID and select the option **TRANSFER** and enter the old account number.
 c) Also enter the correct account open date and enter the maturity date (\`31-03-YYYY\`).
@@ -2821,7 +2821,7 @@ o) Then, check the current year transactions in \`HACLI\` menu and previous year
     title: 'About KVP',
     categoryId: 'nsc_kvp_general',
     content: `
-# 14.1.2 About Kisan Vikas Patra (KVP)
+# 9.1.2 About Kisan Vikas Patra (KVP)
 * Amount Invested doubles in **110 months** (9 years & 2 months)
 * Minimum deposit Rs 1000/- and multiple of Rs 1000/- and no maximum limit.
 * Account can be opened by an adult for himself or on behalf of a minor or by two adults.
@@ -2837,7 +2837,7 @@ o) Then, check the current year transactions in \`HACLI\` menu and previous year
     title: 'NSC/KVP Account Opening',
     categoryId: 'nsc_kvp_opening',
     content: `
-# 14.2 NSC/KVP Account Opening
+# 9.2 NSC/KVP Account Opening
 While opening NSC/KVP account the transactions will be in **Entered stage** and agent commission will be in **Posted stage**. If any mistake done regarding agent contact CPC. Do not try to rectify it yourself.
 
 **Before doing NSC/KVP transactions ensure that:**
@@ -2880,12 +2880,12 @@ b. If mode of payment is **Non DOP Cheque**, Check the **Cheque is realized** an
     title: 'Account Closing (Bulk & Individual)',
     categoryId: 'nsc_kvp_closure',
     content: `
-# 14.7 About NSC/KVP Account closing
+# 9.7 About NSC/KVP Account closing
 * NSC/KVP may be closed in bulk or it may be closed individually one certificate at a time. In case of bulk closer there are certain criteria.
 * Trail closer is done in case of Premature and matured certificate or in case of death claim.
 * No separate Trial closer function available. TD/MIS closer menu \`HCAACTD\` may be used to trail close a certificate. But Trial closer of each certificate has to be done individually.
 
-# 14.8 NSC/KVP Account closing [Bulk] (CNSBCV)
+# 9.8 NSC/KVP Account closing [Bulk] (CNSBCV)
 To discharge all certificates issued under **one registration no.** on the **same day**.
 * Only matured certificate can be discharged. Premature closer is not possible.
 * Death claim is also not possible using this menu.
@@ -2908,7 +2908,7 @@ To discharge all certificates issued under **one registration no.** on the **sam
 
 **Note:** While doing the bulk closer if some certificate under the registration is not closed – use individual closer Menu \`CSCCAAC\` to close those certificates and verify them using the same menu.
 
-# 14.9 NSC/KVP Account Closing [Individually - one at a time] (CSCCAAC)
+# 9.9 NSC/KVP Account Closing [Individually - one at a time] (CSCCAAC)
 1. **Menu:** \`CSCCAAC\` – Click Go
 2. **Function:** Z-Close
 3. **Product Type:** Select NSC/KVP
@@ -2928,7 +2928,7 @@ To discharge all certificates issued under **one registration no.** on the **sam
 13. Click **Submit**.
 14. A message will come "Please confirm this is a actual closer and not a trial closer". Click **Yes** to complete the transaction.
 
-## 14.10 NSC/KVP Account Closing Verification
+## 9.10 NSC/KVP Account Closing Verification
 1. **Menu:** \`CSCCAAC\` – Click Go
 2. **Function:** V-Verify
 3. Enter CIF ID of the closed certificate.
@@ -2949,7 +2949,7 @@ To discharge all certificates issued under **one registration no.** on the **sam
     title: 'Duplicate Certificate Print',
     categoryId: 'nsc_kvp_misc',
     content: `
-# 14.11 Duplicate Certificate Print
+# 9.11 Duplicate Certificate Print
 Menu for duplicate certificate is only available for Postmaster of HPO. Duplicate certificate printing can be done by Postmaster by taking proper certificate stock. Before printing duplicate certificate correctness of the certificate allotment can be checked using \`CSCAM\` menu and by selecting Inquire function.
 
 Certificate holder can apply for issue of duplicate certificates only at the CBS post office from where, certificates were issued. Process of issue of duplicate certificates should be started and completed by that CBS Post Office only.
@@ -2982,7 +2982,7 @@ Certificate holder can apply for issue of duplicate certificates only at the CBS
     title: 'Module-Wise Menu List',
     categoryId: 'menus_list',
     content: `
-# Module-Wise Menu List used across India Post offices
+# 11.1 Module-Wise Menu List used across India Post offices
 
 Here is the breakdown organized by primary modules and schemes:
 
@@ -3024,7 +3024,7 @@ Here is the breakdown organized by primary modules and schemes:
 * **HCAACVTD / TDACTCLV**: Verify TD/MIS account closure.
 * **HTM**: Pay monthly MIS interest by debiting the Sundry Deposit MIS account.
 
-## 5. Senior Citizen Savings Scheme (SCSS)
+## 8. Senior Citizen Savings Scheme (SCSS)
 * **CSCAOP / SCSSAO**: Open an SCSS account.
 * **CSCAOPV / SCSSAV**: Verify an SCSS account.
 * **CSCAOPM / SCSSMBV**: Modify SCSS details before verification.
@@ -3038,12 +3038,12 @@ Here is the breakdown organized by primary modules and schemes:
 * **PPFAEXT / HCEXTN**: Extend the maturity period of a PPF account.
 * **HAFSM**: Unfreeze a dormant or frozen account.
 
-## 7. National Savings Certificate (NSC) & Kisan Vikas Patra (KVP)
+## 1. National Savings Certificate (NSC) & Kisan Vikas Patra (KVP)
 * **CSCOAAC / NSCAO**: Open an NSC or KVP account.
 * **CSCOAACV / NSCAOVF**: Verify an NSC/KVP account.
 * **HDRP**: Print certificates/passbooks for NSC or KVP.
 
-## 8. General Inquiries & Financial Monitoring
+## 3. General Inquiries & Financial Monitoring
 * **HFTI / HFTR**: Financial Transaction Inquiry and Report generation.
 * **HTDTRAN**: Specific Term Deposit transaction inquiry.
 * **HABI**: General Balance Inquiry.
